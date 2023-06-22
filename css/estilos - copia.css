@@ -1,0 +1,837 @@
+
+/*.color1 { #cc2a21 }; rojo
+.color2 { #e4b37c }; cremita
+.color3 { #16366e }; azul
+.color4 { #bd7a75 }; rosita
+.color5 { #babdc4 }; gris
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.headerr{
+    background:  #16366e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+.logo{
+    width: 400px;
+    color: whitesmoke;
+
+}
+
+ul li{
+    list-style-type: none;
+    font-weight: bolder;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 10px;
+    
+    
+    
+
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+    padding: 10px;
+}
+.menu  li a:hover{
+    
+   background-color: #e4b37c;
+   border-radius: 10px;
+   transition: all  1s;
+}
+
+.d-block{
+    background-size: cover;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.nav-link{
+    color: antiquewhite;
+ }
+
+
+h3 {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 50px;
+    font-weight: bolder;
+}
+p{
+    color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 15px;
+}
+
+/*class botones*/
+
+.btnProd{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    border-radius: 10px;
+    background:   #babdc4;
+    width: 200px;
+    
+}
+
+.btnVin{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background: #babdc4;
+
+}
+
+.btnDep{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+  border-radius: 10px;
+    background:  #babdc4;
+}
+.btnOtr{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+   font-size: 30px;
+    border-radius: 10px;
+    background:  #babdc4;
+    text-align: center;
+    
+}
+.secciones{
+    height: 100vh;
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+    
+    }
+
+/*class productos*/
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
+}
+.buscador input{
+    height: 40px;
+    width: 400px;
+    border-radius: 40px;
+}
+.buscador button{
+    height: 35px;
+    width: 120px;
+    font-size: 18px;
+    color: antiquewhite;
+    background: #16366e;
+    border-radius: 40px;
+
+}
+.padre img{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+}
+
+.padre{
+height: 110vh;
+display: flex;
+flex-direction:row ;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+
+}
+.hijo{
+    background:#babdc4;
+    height: 50vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hijo .vermas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #16366e;
+    font-weight: bolder;
+    border-radius: 40px;
+    padding: 26px 10px;
+    
+    
+}
+
+/*class contacto*/
+.padreContacto{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 450px;
+    padding: 20px ;
+    border: solid 1px gray;
+    border-radius: 20px;
+    width: 650px;
+    background: #babdc4;
+  
+
+    
+}
+.hijocontacto{
+    text-align: center;
+}
+.contacto h1{
+    text-align: center;
+    font-size: 35px;
+    color:black ;
+    font-weight: bolder;
+
+}
+.contacto label{
+    font-size: 20px;
+    display: block;
+
+
+}
+.contacto input{
+    height: 20px;
+
+    
+}
+ 
+
+/* class nosotros*/
+
+.caja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.padreInfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 530px;
+    background: #babdc4;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    height: 500px;
+}
+
+.padreInfo img{
+
+    height: 20px;
+    width: 20px;
+}
+.hijoInfo{
+   display: flex;
+    flex-direction: row;
+    padding: 10px;
+    
+}
+
+.foton{
+    height: 340px;
+    width: 340px;
+    align-items: center;
+    margin: 10px;
+
+    
+}
+
+/* entregas*/
+
+.padreEntrega{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 700px;
+}
+.entrega{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 550px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    padding: 10px;
+    height: 530px;
+    margin: 10px;
+}
+
+.entrega img{
+    height: 20px;
+    width: 20px;
+
+}
+.entrega  h4{
+    font-size: 20px
+    
+}
+.entrega a{
+    color: #16366e;
+
+}
+.entrega h6{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 15px;
+}
+.hijoEntrega{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.hijoredes{
+    display: flex;
+    flex-direction: row;
+
+}
+.hijoredes img{
+    padding: 10px;
+}
+.ubicacion{
+    margin: 13px;
+    display: flex;
+    
+    
+    
+}
+
+
+/*footer*/
+.redes img{
+    height: 30px;
+    width: 30px;
+}
+.redes{
+    position: fixed;
+    right: 0;
+    top: 690px;
+    display: block;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+.wsp img{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+   
+
+}
+.wsp{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+footer{
+background: gray;
+height: 50px;
+}
+.footer img{
+    display: inline;
+
+
+}
+
+/* responsive tamaño tablet 768px*/
+@media screen and (max-width: 768px) {
+    /*index*/
+    .headerr{
+        flex-direction: column;
+    
+    }
+    .d-block{
+        background-size: cover;
+        height: 50vh;
+        width: 20%;
+        padding: 10px;
+    }
+    .secciones{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        height: 50vh;
+        justify-content: center;
+        
+    }
+    .secciones div{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .btnProd{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        text-align: center;
+        border-radius: 10px;
+        background:   #babdc4;
+        
+    }
+    
+    .btnVin{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        text-align: center;
+        border-radius: 10px;
+        background: #babdc4;
+    
+    }
+    
+    .btnDep{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        text-align: center;
+      border-radius: 10px;
+        background:  #babdc4;
+    }
+    .btnOtr{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        border-radius: 10px;
+        background:  #babdc4;
+        text-align: center;
+        
+    }
+
+    /*productos*/
+    .buscador{
+        flex-direction: row;
+        gap: 10px;
+        padding: 40px;
+
+    }
+    .buscador input{
+        height: 40px;
+        width: 300px;
+        border-radius: 40px;
+    }
+    .buscador button{
+        height: 35px;
+        width: 100px;
+        font-size: 18px;
+        color: antiquewhite;
+        background: #16366e;
+        border-radius: 40px;
+    
+    }
+    .padre{
+        height: 120vh;
+        display: flex;
+        flex-direction:row ;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        }
+        .hijo{
+            background:#babdc4;
+            height: 39vh;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+    .hijo .vermas{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: #16366e;
+        font-weight: bolder;
+        border-radius: 40px;
+        padding: 20px 10px;
+        
+        
+    }
+    /*nosotros*/
+    .padreInfo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 300px;
+        background: #babdc4;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 10px;
+        height: 300px;
+    }
+
+    .padreInfo img{ 
+        height: 20px;
+        width: 20px;
+    }
+    .hijoInfo{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+
+    }
+    
+    .foton{
+        height: 320px;
+        width: 320px;
+        align-items: center;
+        margin: 10px;
+    
+    
+    }
+    /*contacto*/
+    .contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 350px;
+        padding: 20px ;
+        border: solid 1px gray;
+        border-radius: 20px;
+        width: 540px;
+        background: #babdc4;
+ 
+    }
+    /*entregas*/
+
+    .padreEntrega{
+        display: grid;
+        grid-template-columns: repeat(2, 50% 50%);
+        height: 500px;
+    
+    }
+    .entrega{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 350px;
+        border: solid 1px gray;
+        border-radius: 20px;
+        height: 450px;
+        margin: 10px;
+    }
+    
+        
+
+    
+
+}
+
+/*tamaño celular 
+@media screen and (max-width: 500px) {
+    .headerr{
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+    .menu{
+        flex-direction: row;
+
+    }
+    .secciones{
+        display: flex;
+        flex-direction: column;
+        height: 110vh;
+        padding: 10px;
+        justify-content: space-evenly;
+
+       
+    }
+    .secciones div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    
+
+
+    }
+    .d-block{
+        background-size: cover;
+        height: 40vh;
+        width: 20%;
+        padding: 10px;
+        
+    }
+     .headerr .container-fluid1{
+        position: absolute;
+        height: 100px;
+        z-index: 10000;
+        left: 10px;
+        
+     }
+     .navbar-toggler{
+        background-color: aliceblue;
+        border: solid  1px gray;
+
+     }
+     
+     .navbar-toggler-icon{
+        background-color: aliceblue;
+     }
+     .navbar-collapse{
+        background-color: #16366e;
+        width: 100px;
+        border-radius: 10px;
+     }
+     .navbar-nav{
+        text-align: center;
+     }
+     
+     .nav-link{
+        color: antiquewhite;
+     }
+    .btnProd{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        text-align: center;
+        border-radius: 10px;
+        background:   #babdc4;
+        
+    }
+    
+    .btnVin{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        text-align: center;
+        border-radius: 10px;
+        background: #babdc4;
+    
+    }
+    
+    .btnDep{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        text-align: center;
+      border-radius: 10px;
+        background:  #babdc4;
+    }
+    .btnOtr{
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+        width: 230px;
+        height: 90px;
+        border-radius: 10px;
+        background:  #babdc4;
+        text-align: center;
+        
+    }
+    /*productos*/
+    .buscador{
+        flex-direction:row;
+        gap: 10px;
+        padding: 30px;
+    }
+    .buscador input{
+        height: 30px;
+        width: 250px;
+        border-radius: 40px;
+    }
+    .buscador button{
+        height: 30px;
+        width: 100px;
+        font-size: 18px;
+        color: antiquewhite;
+        background: #16366e;
+        border-radius: 40px;
+    
+    }
+    .padre{
+        height: 180vh;
+        display: flex;
+        flex-direction:row ;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        
+        }
+        .hijo{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background:#babdc4;
+            height: 50vh;
+            border-radius: 10px;
+            width: 160px;
+            gap: 10px;
+            justify-content: center;
+            
+        }
+        
+        .hijo img{
+            width: 150px;
+            height: 170px;
+        }
+        
+        .hijo .vermas{
+        display: flex;
+        flex-direction: column;
+        color: #16366e;
+        font-weight: bolder;
+       
+        
+    
+        
+        
+    }
+    /* class nosotros*/
+
+    .caja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+}
+    .padreInfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 380px;
+    background: #babdc4;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    height: 110vh;
+    
+}
+    
+    .foton{
+        height: 320px;
+        width: 320px;
+        align-items: center;
+        margin: 10px;
+    
+    
+    }
+/*contacto*/
+    .contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 420px;
+        border: solid 1px gray;
+        border-radius: 20px;
+        width: 280px;
+        background: #babdc4;
+ 
+    }
+    .hijocontacto{
+        font-size: 10px;
+        width: 250px;
+    }
+    
+
+  /*entregas*/
+
+    .padreEntrega{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px 300px 300px;
+    height: 230vh;
+    grid-template-areas: 
+    "entrega entrega"
+    "entrega entrega"
+    "entrega entrega"
+    "ubi ubi";
+
+}
+  .entrega{
+    grid-area: entrega;
+  }
+  .ubicacion{
+    grid-area: ubi;
+  }
+    .entrega{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    height: 640px;
+
+}
+    
+    

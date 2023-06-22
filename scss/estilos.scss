@@ -1,0 +1,816 @@
+
+@import "variables";
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*extend*/
+.botones{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    border-radius: 10px;
+    background:   $color3;
+    width: 200px;
+    text-align: center;
+
+}
+.claseinfo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 550px;
+        background: #babdc4;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 10px;
+        height: 500px;
+        
+ }
+ /*mixin sin parametros*/
+@mixin botonesTablet{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    border-radius: 10px;
+    background:   #babdc4;
+}
+
+
+body{
+    background: $color3;
+    margin: 0;
+}
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+
+}
+
+.headerr{
+    background: $color3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    margin: 0;
+
+        .logo{
+            width: 400px;
+            color: whitesmoke;
+            padding: 10px;
+    
+        }
+        
+        .menu{
+            width: 500px;
+            padding: 10px;
+
+            .nav-link{
+                color: antiquewhite;
+                padding: 10px;
+                font-size: 20px;
+}
+
+        }
+}
+.banner{
+    margin: 0;
+    
+}
+.d-block{
+    background-size: cover;
+    padding: 10px;
+  
+}
+
+        .secciones{
+            height: 100vh;
+            display: flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                
+             
+                
+            
+
+            .btnProd{
+                @extend .botones;
+                width: 200px;
+                height: 200px;
+                align-items: center;
+        
+        }
+            .btnVin{
+                @extend .botones;
+                width: 200px;
+                height: 200px;
+        }
+            .btnDep{
+                @extend .botones; 
+                width: 200px;
+                height: 200px;
+        }
+            .btnOtr{
+                @extend .botones;
+                width: 200px;
+                height: 200px;
+          } 
+        } 
+                        
+}
+    
+
+/*class productos*/
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
+        input{
+            height: 40px;  
+            width: 400px;
+            border-radius: 40px;
+        }
+        button{
+            height: 35px;
+            width: 120px;
+            font-size: 18px;
+            color: antiquewhite;
+            background: #16366e;
+            border-radius: 40px;
+
+}
+}
+
+.padre{
+    height: 110vh;
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img{
+        height: 200px;
+        width: 200px;
+        padding: 10px;
+    }
+        .hijo{
+            background:#babdc4;
+            height: 50vh;
+            border-radius: 10px;
+            text-align: center;
+
+            .vermas{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                color: #16366e;
+                font-weight: bolder;
+                border-radius: 40px;
+                padding: 26px 10px;
+            }
+                
+    }
+    
+    
+    }
+
+    /*class contacto*/
+.padreContacto{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+
+        .contacto{
+            @extend .claseinfo;    
+            h1{
+                text-align: center;
+                font-size: 35px;
+                color:black ;
+                font-weight: bolder;
+            
+            }
+            label{
+                font-size: 20px;
+                display: block;
+        
+            }
+            input{
+                height: 20px;
+            
+            }
+            .hijocontacto{
+                text-align: center;
+            }
+    }    
+
+}
+/* class nosotros*/
+.caja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 100vh;
+    
+        .padreInfo{
+            @extend .claseinfo;
+            display: flex;
+            width: 650px;
+           
+            
+            img{
+                height: 20px;
+                width: 20px;
+            }
+            .hijoInfo{
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+            
+            }
+    }
+
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    grid-gap: 20px;
+
+        
+        .foton{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+           
+
+}
+        }
+    
+
+/* entregas*/
+
+.padreEntrega{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 700px;
+
+        .entrega{
+            @extend .claseinfo;
+
+            img{
+                height: 20px;
+                width: 20px;
+            
+            }
+            h4{
+                font-size: 20px
+                
+            }
+            a{
+                color: #16366e;
+            
+            }
+            h6{
+                font-size: 30px;
+                font-weight: bolder;
+                text-align: center;
+                padding: 15px;
+            }
+            .hijoEntrega{
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+                gap: 10px;
+                
+                    a{
+                        display: flex;
+                        justify-content: end;
+                    }
+            }
+        }
+}
+
+.hijoredes{
+    display: flex;
+    flex-direction: row;
+        img{
+            padding: 10px;
+    }
+
+}
+.ubicacion{
+    margin: 13px;
+    display: flex;
+
+}
+.container-fluid{
+
+        .footer{
+            background: $color3;
+            height: 110px;
+            align-items: center;
+
+            p{
+                font-size: 15px;
+                text-align: center;
+                font-weight: bolder;
+    }
+            img{
+                display: inline;
+        }
+        .redes{
+            height: 50px;
+            display: block;
+            text-align: center;
+
+            img{
+                height: 20px;
+                width: 20px;
+            }
+            a{
+                text-decoration: none;
+                color: whitesmoke;
+            }
+            
+        }
+       
+    }
+    .wsp{
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    
+        img{
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+           
+        }
+    }
+}
+
+    /* responsive tamaño tablet 768px*/
+@media screen and (max-width: 768px) {
+    /*index*/
+    .headerr{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+    
+            .container-fluid{
+                position: absolute;
+                height: 100px;
+                z-index: 10000;
+                left: 10px;
+                
+
+                .navbar-toggler{
+                    background-color: aliceblue;
+                    border: solid  1px gray;
+    }
+
+                .navbar-toggler-icon{
+                    background-color: aliceblue;
+    
+    }
+                .navbar-collapse{
+                    background-color: #16366e;
+                    width: 120px;
+                    border-radius: 10px;
+                    position: absolute;
+                    top: 75px;
+    }
+                .navbar-nav{
+                    text-align: center;
+    }
+    
+                .nav-link{
+                    color: antiquewhite;
+    }
+    }
+}
+        .d-block{
+            background-size: cover;
+            height: 50vh;
+            width: 20%;
+            padding: 10px;
+    }
+
+        .secciones{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            height: 70vh;
+            justify-content: center;
+
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center
+                
+            }
+        
+    }
+        .btnProd{ 
+            @include botonesTablet;
+
+    }
+        .btnVin{
+            @include botonesTablet;
+    }
+        .btnDep{
+            @include botonesTablet;
+    }
+        .btnOtr{
+            @include botonesTablet;
+        
+    }
+        /*productos*/
+        .buscador{
+            flex-direction: row;
+            gap: 10px;
+            padding: 40px;
+
+            input{
+                height: 40px;
+                width: 300px;
+                border-radius: 40px;
+            }
+
+            button{
+                height: 35px;
+                width: 100px;
+                font-size: 18px;
+                color: antiquewhite;
+                background: #16366e;
+                border-radius: 40px;
+            
+            }
+
+    }
+        .padre{
+            height: 120vh;
+            display: flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .hijo{
+                background:#babdc4;
+                height: 39vh;
+                border-radius: 10px;
+                text-align: center;
+                
+                .vermas{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    color: #16366e;
+                    font-weight: bolder;
+                    border-radius: 40px;
+                    padding: 20px 10px;
+                    
+                    
+                }
+            }
+        
+        }
+    /*nosotros*/
+    .caja{
+        height: 200vh;
+
+    
+        .padreInfo{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 400px;
+            background: #babdc4;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 10px;
+            height: 590px;
+
+                img{ 
+                    height: 20px;
+                    width: 20px;
+        }
+        .hijoInfo{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+        
+    }
+}
+        .foton{
+            height: 320px;
+            width: 320px;
+            align-items: center;
+            margin: 10px;
+    }
+
+        /*contacto*/
+        .contacto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 350px;
+            padding: 20px ;
+            border: solid 1px gray;
+            border-radius: 20px;
+            width: 540px;
+            background: #babdc4;
+ 
+    }
+
+        /*entregas*/
+        .padreEntrega{
+            display: grid;
+            grid-template-columns: repeat(2, 50% 50%);
+            height: 500px;
+            
+            .entrega{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 350px;
+                border: solid 1px gray;
+                border-radius: 20px;
+                height: 450px;
+                margin: 10px;
+            }
+        }
+}
+
+/*tamaño celular */
+@media screen and (max-width: 500px) {
+    .container-fluid{
+        margin: 0;
+    }
+    .headerr{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+    
+            .container-fluid{
+                position: absolute;
+                height: 100px;
+                z-index: 10000;
+                left: 10px;
+                margin: 0;
+                
+
+                .navbar-toggler{
+                    background-color: aliceblue;
+                    border: solid  1px gray;
+    }
+
+                .navbar-toggler-icon{
+                    background-color: aliceblue;
+    
+    }
+                .navbar-collapse{
+                    background-color: #16366e;
+                    width: 120px;
+                    border-radius: 10px;
+                    position: absolute;
+                    top: 75px;
+    }
+                .navbar-nav{
+                    text-align: center;
+    }
+    
+                .nav-link{
+                    color: antiquewhite;
+    }
+    }
+}
+        .secciones{
+            display: flex;
+            flex-direction: column;
+            height: 140vh;
+            padding: 10px;
+            justify-content: space-evenly;
+            
+            div{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+    }
+
+        .d-block{
+            background-size: cover;
+            height: 40vh;
+            width: 20%;
+            padding: 10px; 
+    }
+        .btnProd{
+            @include botonesTablet;
+    }
+        .btnVin{
+            @include botonesTablet;
+    }
+        .btnDep{
+            @include botonesTablet;
+    }
+        .btnOtr{
+            @include botonesTablet;
+        }
+
+        /*productos*/
+        .buscador{
+            flex-direction:row;
+            gap: 10px;
+            padding: 30px;
+
+            input{
+                height: 30px;
+                width: 250px;
+                border-radius: 40px;
+            }
+            button{
+                height: 30px;
+                width: 100px;
+                font-size: 18px;
+                color: antiquewhite;
+                background: #16366e;
+                border-radius: 40px;
+            
+            }
+
+    }
+        .padre{
+            height: 180vh;
+            display: flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .hijo{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background:#babdc4;
+                height: 50vh;
+                border-radius: 10px;
+                width: 160px;
+                gap: 10px;
+                justify-content: center;
+
+                img{
+                    width: 150px;
+                    height: 170px;
+                }
+                .vermas{
+                    display: flex;
+                    flex-direction: column;
+                    color: #16366e;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+        /* class nosotros*/
+        .caja{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+
+            .padreInfo{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 380px;
+                background: #babdc4;
+                border-radius: 20px;
+                padding: 20px;
+                margin: 10px;
+                height: 110vh;
+                
+            }
+    }
+        .foton{
+            height: 320px;
+            width: 320px;
+            align-items: center;
+            margin: 10px;
+    }
+
+        /*contacto*/
+        .padreContacto{
+            background-image: url(../img/manos.jpg);
+            background-size: cover;
+
+
+                .contacto{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    height: 420px;
+                    border: solid 1px gray;
+                    border-radius: 20px;
+                    width: 280px;
+                    background: #babdc4;
+
+                        .hijocontacto{
+                            font-size: 10px;
+                            width: 250px;
+            }
+    }
+}
+
+        /*entregas*/
+        .padreEntrega{
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 200px 300px 300px;
+            height: 230vh;
+            grid-template-areas: 
+            "entrega entrega"
+            "entrega entrega"
+            "entrega entrega"
+            "ubi ubi";
+
+            .entrega{
+                grid-area: entrega;
+    }
+            .ubicacion{
+                grid-area: ubi;
+    }
+    .entrega{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 300px;
+        border: solid 1px gray;
+        border-radius: 20px;
+        height: 640px;
+    
+    }
+    .padreUbi{
+        display: flex;
+        width: 350px;
+        height: 400px;
+
+            .ubicacion{
+                flex-direction: column;
+                
+                    iframe{
+                        width: 360px;
+                    }
+            }
+    }
+    }
+
+
+}
+        
