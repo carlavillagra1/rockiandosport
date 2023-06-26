@@ -2,20 +2,20 @@
 @import "variables";
 
 
-*{
-    margin: 0;
-    padding: 0;
-}
+
 /*extend*/
 .botones{
     text-decoration: none;
     font-weight: bolder;
-    color: black;
+    color: $color1;
     font-size: 30px;
     border-radius: 10px;
     background:   $color3;
     width: 200px;
     text-align: center;
+    background: none;
+    border: solid 5px rebeccapurple;
+    
 
 }
 .claseinfo{
@@ -45,14 +45,9 @@
 
 
 body{
-    background: $color3;
+    background: $color2;
     margin: 0;
-}
-
-.container-fluid{
-    margin: 0;
-    padding: 0;
-
+   
 }
 
 .headerr{
@@ -64,10 +59,12 @@ body{
     align-items: center;
     margin: 0;
 
+
         .logo{
             width: 400px;
-            color: whitesmoke;
+            color: $color1;
             padding: 10px;
+            font-weight: bolder;
     
         }
         
@@ -77,12 +74,17 @@ body{
 
             .nav-link{
                 color: antiquewhite;
-                padding: 10px;
                 font-size: 20px;
+                font-weight: bolder;
+
+                    &:hover{
+                        background: $color3;
+                }
 }
 
         }
 }
+
 .banner{
     margin: 0;
     
@@ -106,8 +108,7 @@ body{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                
-             
+                align-items: center;
                 
             
 
@@ -115,8 +116,7 @@ body{
                 @extend .botones;
                 width: 200px;
                 height: 200px;
-                align-items: center;
-        
+                
         }
             .btnVin{
                 @extend .botones;
@@ -176,7 +176,7 @@ body{
         padding: 10px;
     }
         .hijo{
-            background:#babdc4;
+            background: $color3;
             height: 50vh;
             border-radius: 10px;
             text-align: center;
@@ -240,7 +240,7 @@ body{
             @extend .claseinfo;
             display: flex;
             width: 650px;
-           
+
             
             img{
                 height: 20px;
@@ -307,31 +307,68 @@ body{
                 padding: 10px;
                 gap: 10px;
                 
+                   .puntos{
+                    width: 410px;
+                    display: flex;
+                    justify-content: space-between;
+
                     a{
-                        display: flex;
-                        justify-content: end;
+                        text-decoration: none;
+                        color: #13161c;
+                        padding: 0 10px 0 10px;
+                        font-weight: bold;
+                        border: 2px solid #0e1118;
                     }
+                   }
+            }
+            .hijoredes{
+                display: flex;
+                flex-direction: row;
+                width: 400px;
+                justify-content: center;
+                gap: 10px;
+                align-items: center;
+                padding: 10px;
+               
+                a{
+                    text-decoration: none;
+                    color: #0e1118;
+                    font-weight: bolder;
+                }
+
+                img{
+                    height: 30px;
+                    width: 30px;
+                
+                
+                }
+            
             }
         }
 }
 
-.hijoredes{
-    display: flex;
-    flex-direction: row;
-        img{
-            padding: 10px;
-    }
 
-}
-.ubicacion{
-    margin: 13px;
+.padreUbi{
     display: flex;
+    width: 630px;
+    height: 490px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #13161c;
 
+        .ubicacion{
+            flex-direction: column;
+            
+                iframe{
+                    width: 610px;
+                }
+        }
 }
 .container-fluid{
+        margin: 0;
 
         .footer{
-            background: $color3;
+            background: $color1;
             height: 110px;
             align-items: center;
 
@@ -354,7 +391,8 @@ body{
             }
             a{
                 text-decoration: none;
-                color: whitesmoke;
+                color: $color2;
+                font-weight: bolder;
             }
             
         }
@@ -582,24 +620,30 @@ body{
 @media screen and (max-width: 500px) {
     .container-fluid{
         margin: 0;
-    }
+    
     .headerr{
         display: flex;
         flex-direction: row;
         padding: 10px;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         width: 100%;
         margin: 0;
+        background: #16366e;
+
+                .logo{
+                    width: 260px;
+                    font-size: 25px;
+                    
+                
+                }
+                .menu{
+                    width: 60px;
+
+                
 
     
-            .container-fluid{
-                position: absolute;
-                height: 100px;
-                z-index: 10000;
-                left: 10px;
-                margin: 0;
-                
+           
 
                 .navbar-toggler{
                     background-color: aliceblue;
@@ -611,21 +655,20 @@ body{
     
     }
                 .navbar-collapse{
-                    background-color: #16366e;
-                    width: 120px;
+                    background:$color3;
+                    width: 160%;
                     border-radius: 10px;
-                    position: absolute;
-                    top: 75px;
     }
                 .navbar-nav{
                     text-align: center;
     }
     
                 .nav-link{
-                    color: antiquewhite;
+                    color: $color2;
     }
     }
 }
+    }
         .secciones{
             display: flex;
             flex-direction: column;
