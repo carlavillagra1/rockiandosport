@@ -117,7 +117,7 @@ body {
   width: 120px;
   font-size: 18px;
   color: antiquewhite;
-  background: #16366e;
+  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
   border-radius: 40px;
 }
 
@@ -214,6 +214,9 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   height: 700px;
+}
+.padreEntrega .entrega {
+  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
 }
 .padreEntrega .entrega img {
   height: 20px;
@@ -317,6 +320,8 @@ body {
   position: fixed;
   bottom: 50px;
   right: 50px;
+  width: 100px;
+  height: 200px;
 }
 .container-fluid .wsp img {
   height: 40px;
