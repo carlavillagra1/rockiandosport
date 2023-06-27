@@ -7,14 +7,16 @@
   color: #daca4a;
   font-size: 30px;
   border-radius: 10px;
-  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
+  background: #010e0e;
   width: 200px;
   text-align: center;
-  background: none;
-  border: solid 5px rebeccapurple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px #daca4a;
 }
 
-.claseinfo, .padreEntrega .entrega, .caja .padreInfo, .padreContacto .contacto {
+.claseinfo, .padreEntrega .entrega, .caja .padreInfo, .cajapadre .padreContacto .contacto {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -33,7 +35,6 @@ body {
 }
 
 .headerr {
-  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,7 +58,7 @@ body {
   font-weight: bolder;
 }
 .headerr .menu .nav-link:hover {
-  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
+  color: #daca4a;
 }
 
 .banner {
@@ -106,6 +107,7 @@ body {
   flex-direction: row;
   justify-content: center;
   padding: 10px;
+  gap: 10px;
 }
 .buscador input {
   height: 40px;
@@ -113,12 +115,14 @@ body {
   border-radius: 40px;
 }
 .buscador button {
-  height: 35px;
+  height: 39px;
   width: 120px;
   font-size: 18px;
   color: antiquewhite;
-  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
+  background: #010e0e;
   border-radius: 40px;
+  border: solid 3px #daca4a;
+  font-weight: bolder;
 }
 
 .padre {
@@ -135,43 +139,83 @@ body {
   padding: 10px;
 }
 .padre .hijo {
-  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
+  border: solid 3px #daca4a;
   height: 50vh;
   border-radius: 10px;
   text-align: center;
+  color: white;
+  width: 250px;
 }
 .padre .hijo .vermas {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: #16366e;
+  color: white;
   font-weight: bolder;
   border-radius: 40px;
   padding: 26px 10px;
 }
 
 /*class contacto*/
-.padreContacto {
+.cajapadre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.cajapadre .padreContacto {
   display: grid;
   justify-content: center;
   align-items: center;
   height: 550px;
 }
-.padreContacto .contacto h1 {
+.cajapadre .padreContacto .contacto {
+  background: none;
+  border: solid 5px #daca4a;
+  font-weight: bolder;
+  gap: 10px;
+}
+.cajapadre .padreContacto .contacto h1 {
   text-align: center;
   font-size: 35px;
-  color: black;
+  color: white;
   font-weight: bolder;
 }
-.padreContacto .contacto label {
+.cajapadre .padreContacto .contacto label {
   font-size: 20px;
   display: block;
+  color: white;
 }
-.padreContacto .contacto input {
+.cajapadre .padreContacto .contacto input {
   height: 20px;
+  width: 150px;
 }
-.padreContacto .contacto .hijocontacto {
+.cajapadre .padreContacto .contacto input:focus {
+  width: 200px;
+  height: 30px;
+  transition: all 2s;
+}
+.cajapadre .padreContacto .contacto textarea {
+  width: 300px;
+  height: 200px;
+}
+.cajapadre .padreContacto .contacto textarea:focus {
+  width: 350px;
+  height: 215px;
+  transition: all 2s;
+}
+.cajapadre .padreContacto .contacto .hijocontacto {
   text-align: center;
+}
+.cajapadre .galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 150px;
+  grid-gap: 20px;
+}
+.cajapadre .galeria .foton {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* class nosotros*/
@@ -186,27 +230,42 @@ body {
 .caja .padreInfo {
   display: flex;
   width: 650px;
+  background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
 }
 .caja .padreInfo img {
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
 }
 .caja .padreInfo .hijoInfo {
   display: flex;
   flex-direction: row;
   padding: 10px;
+  gap: 10px;
+}
+.caja .padreInfo .hijoInfo h4 {
+  font-size: 20px;
+  font-weight: bolder;
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 150px;
-  grid-gap: 20px;
+.cajaperfil {
+  height: 500px;
+  width: 400px;
+  border: solid 3px #daca4a;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
 }
-.galeria .foton {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.cajaperfil iframe {
+  width: 300px;
+  height: 400px;
+}
+.cajaperfil h6 {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
 }
 
 /* entregas*/
@@ -224,9 +283,7 @@ body {
 }
 .padreEntrega .entrega h4 {
   font-size: 20px;
-}
-.padreEntrega .entrega a {
-  color: #16366e;
+  font-weight: bolder;
 }
 .padreEntrega .entrega h6 {
   font-size: 30px;
@@ -291,7 +348,7 @@ body {
 }
 .container-fluid .footer {
   background: #daca4a;
-  height: 110px;
+  height: 180px;
   align-items: center;
 }
 .container-fluid .footer p {
@@ -303,9 +360,13 @@ body {
   display: inline;
 }
 .container-fluid .footer .redes {
-  height: 50px;
-  display: block;
-  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-fluid .footer .redes h5 {
+  font-size: 15px;
+  font-weight: bolder;
 }
 .container-fluid .footer .redes img {
   height: 20px;
@@ -316,14 +377,15 @@ body {
   color: #010e0e;
   font-weight: bolder;
 }
-.container-fluid .wsp {
+
+.wsp {
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 30px;
   width: 100px;
   height: 200px;
 }
-.container-fluid .wsp img {
+.wsp img {
   height: 40px;
   width: 40px;
   background-color: white;
@@ -338,35 +400,34 @@ body {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     margin: 0;
   }
-  .headerr .container-fluid {
-    position: absolute;
-    height: 100px;
-    z-index: 10000;
-    left: 10px;
+  .headerr .menu {
+    width: 60px;
   }
-  .headerr .container-fluid .navbar-toggler {
-    background-color: aliceblue;
-    border: solid 1px gray;
+  .headerr .menu .navbar-toggler {
+    background-color: white;
+    border: solid 5px #daca4a;
   }
-  .headerr .container-fluid .navbar-toggler-icon {
-    background-color: aliceblue;
+  .headerr .menu .navbar-toggler-icon {
+    background-color: white;
   }
-  .headerr .container-fluid .navbar-collapse {
-    background-color: #16366e;
-    width: 120px;
+  .headerr .menu .navbar-collapse {
+    background: #3d432d;
+    width: 230px;
     border-radius: 10px;
     position: absolute;
     top: 75px;
+    right: 5px;
+    z-index: 10000;
   }
-  .headerr .container-fluid .navbar-nav {
+  .headerr .menu .navbar-nav {
     text-align: center;
   }
-  .headerr .container-fluid .nav-link {
+  .headerr .menu .nav-link {
     color: antiquewhite;
   }
   .d-block {
@@ -396,7 +457,9 @@ body {
     height: 150px;
     text-align: center;
     border-radius: 10px;
-    background: #babdc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .btnVin {
     text-decoration: none;
@@ -407,7 +470,9 @@ body {
     height: 150px;
     text-align: center;
     border-radius: 10px;
-    background: #babdc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .btnDep {
     text-decoration: none;
@@ -418,7 +483,9 @@ body {
     height: 150px;
     text-align: center;
     border-radius: 10px;
-    background: #babdc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .btnOtr {
     text-decoration: none;
@@ -429,26 +496,32 @@ body {
     height: 150px;
     text-align: center;
     border-radius: 10px;
-    background: #babdc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   /*productos*/
   .buscador {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding: 10px;
     gap: 10px;
-    padding: 40px;
   }
   .buscador input {
     height: 40px;
-    width: 300px;
+    width: 400px;
     border-radius: 40px;
   }
   .buscador button {
-    height: 35px;
-    width: 100px;
+    height: 39px;
+    width: 120px;
     font-size: 18px;
     color: antiquewhite;
-    background: #16366e;
+    background: #010e0e;
     border-radius: 40px;
+    border: solid 3px #daca4a;
+    font-weight: bolder;
   }
   .padre {
     height: 120vh;
@@ -459,30 +532,31 @@ body {
     align-items: center;
   }
   .padre .hijo {
-    background: #babdc4;
+    border: solid 3px #daca4a;
     height: 39vh;
     border-radius: 10px;
     text-align: center;
+    width: 200px;
   }
   .padre .hijo .vermas {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #16366e;
+    color: white;
     font-weight: bolder;
     border-radius: 40px;
     padding: 20px 10px;
   }
   /*nosotros*/
   .caja {
-    height: 200vh;
+    height: 130vh;
   }
   .caja .padreInfo {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 400px;
-    background: #babdc4;
+    width: 550px;
+    background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
@@ -497,14 +571,14 @@ body {
     flex-direction: row;
     padding: 10px;
   }
-  .foton {
-    height: 320px;
-    width: 320px;
-    align-items: center;
-    margin: 10px;
-  }
   /*contacto*/
-  .contacto {
+  .cajapadre {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .cajapadre .contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -516,30 +590,51 @@ body {
     width: 540px;
     background: #babdc4;
   }
+  .cajapadre .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    grid-gap: 20px;
+  }
+  .cajapadre .galeria .foton {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
   /*entregas*/
   .padreEntrega {
-    display: grid;
-    grid-template-columns: repeat(2, 50% 50%);
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    padding: 10px;
   }
   .padreEntrega .entrega {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    width: 350px;
+    width: 560px;
     border: solid 1px gray;
     border-radius: 20px;
-    height: 450px;
+    height: 580px;
     margin: 10px;
+  }
+  .padreUbi {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 400px;
+  }
+  .padreUbi .ubicacion {
+    flex-direction: column;
+  }
+  .padreUbi .ubicacion iframe {
+    width: 560px;
   }
 }
 /*tamaño celular */
 @media screen and (max-width: 500px) {
-  .container-fluid {
-    margin: 0;
-  }
-  .container-fluid .headerr {
+  .headerr {
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -547,32 +642,35 @@ body {
     align-items: center;
     width: 100%;
     margin: 0;
-    background: #16366e;
   }
-  .container-fluid .headerr .logo {
+  .headerr .logo {
     width: 260px;
     font-size: 25px;
   }
-  .container-fluid .headerr .menu {
+  .headerr .menu {
     width: 60px;
   }
-  .container-fluid .headerr .menu .navbar-toggler {
-    background-color: aliceblue;
-    border: solid 1px gray;
+  .headerr .menu .navbar-toggler {
+    background-color: white;
+    border: solid 5px #daca4a;
   }
-  .container-fluid .headerr .menu .navbar-toggler-icon {
-    background-color: aliceblue;
+  .headerr .menu .navbar-toggler-icon {
+    background-color: white;
   }
-  .container-fluid .headerr .menu .navbar-collapse {
-    background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
-    width: 160%;
+  .headerr .menu .navbar-collapse {
+    background: #3d432d;
+    width: 230px;
     border-radius: 10px;
+    position: absolute;
+    top: 75px;
+    right: 5px;
+    z-index: 10000;
   }
-  .container-fluid .headerr .menu .navbar-nav {
+  .headerr .menu .navbar-nav {
     text-align: center;
   }
-  .container-fluid .headerr .menu .nav-link {
-    color: #010e0e;
+  .headerr .menu .nav-link {
+    color: antiquewhite;
   }
   .secciones {
     display: flex;
@@ -587,55 +685,66 @@ body {
     flex-wrap: wrap;
     align-items: center;
   }
+  .secciones .btnProd {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .secciones .btnVin {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .secciones .btnDep {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .secciones .btnOtr {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .d-block {
     background-size: cover;
     height: 40vh;
     width: 20%;
     padding: 10px;
-  }
-  .btnProd {
-    text-decoration: none;
-    font-weight: bolder;
-    color: black;
-    font-size: 30px;
-    width: 250px;
-    height: 150px;
-    text-align: center;
-    border-radius: 10px;
-    background: #babdc4;
-  }
-  .btnVin {
-    text-decoration: none;
-    font-weight: bolder;
-    color: black;
-    font-size: 30px;
-    width: 250px;
-    height: 150px;
-    text-align: center;
-    border-radius: 10px;
-    background: #babdc4;
-  }
-  .btnDep {
-    text-decoration: none;
-    font-weight: bolder;
-    color: black;
-    font-size: 30px;
-    width: 250px;
-    height: 150px;
-    text-align: center;
-    border-radius: 10px;
-    background: #babdc4;
-  }
-  .btnOtr {
-    text-decoration: none;
-    font-weight: bolder;
-    color: black;
-    font-size: 30px;
-    width: 250px;
-    height: 150px;
-    text-align: center;
-    border-radius: 10px;
-    background: #babdc4;
   }
   /*productos*/
   .buscador {
@@ -649,12 +758,14 @@ body {
     border-radius: 40px;
   }
   .buscador button {
-    height: 30px;
+    height: 33px;
     width: 100px;
     font-size: 18px;
     color: antiquewhite;
-    background: #16366e;
+    background: #010e0e;
     border-radius: 40px;
+    border: solid 3px #daca4a;
+    font-weight: bolder;
   }
   .padre {
     height: 180vh;
@@ -668,7 +779,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: #babdc4;
+    border: solid 3px #daca4a;
     height: 50vh;
     border-radius: 10px;
     width: 160px;
@@ -682,81 +793,167 @@ body {
   .padre .hijo .vermas {
     display: flex;
     flex-direction: column;
-    color: #16366e;
+    color: white;
     font-weight: bolder;
   }
   /* class nosotros*/
   .caja {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 200vh;
+    height: 130vh;
   }
   .caja .padreInfo {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 380px;
-    background: #babdc4;
+    width: 400px;
+    background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 110vh;
+    height: 590px;
   }
-  .foton {
-    height: 320px;
-    width: 320px;
+  .caja .padreInfo img {
+    height: 20px;
+    width: 20px;
+  }
+  .caja .padreInfo .hijoInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  .caja .cajaperfil {
+    height: 500px;
+    width: 360px;
+    border: solid 3px #daca4a;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .caja .cajaperfil iframe {
+    width: 300px;
+    height: 400px;
+  }
+  .caja .cajaperfil h6 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
   }
   /*contacto*/
-  .padreContacto {
-    background-image: url(../img/manos.jpg);
-    background-size: cover;
+  .cajapadre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 130vh;
   }
-  .padreContacto .contacto {
+  .cajapadre .padreContacto {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  .cajapadre .padreContacto .contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    height: 420px;
-    border: solid 1px gray;
+    height: 400px;
+    border: solid 1px #daca4a;
     border-radius: 20px;
-    width: 280px;
-    background: #babdc4;
+    width: 350px;
   }
-  .padreContacto .contacto .hijocontacto {
+  .cajapadre .padreContacto .contacto h1 {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-weight: bolder;
+  }
+  .cajapadre .padreContacto .contacto label {
+    font-size: 20px;
+    display: block;
+    color: white;
+  }
+  .cajapadre .padreContacto .contacto input {
+    height: 20px;
+    width: 110px;
+  }
+  .cajapadre .padreContacto .contacto input:focus {
+    width: 160px;
+    height: 30px;
+    transition: all 2s;
+  }
+  .cajapadre .padreContacto .contacto textarea {
+    width: 140px;
+    height: 100px;
+  }
+  .cajapadre .padreContacto .contacto textarea:focus {
+    width: 200px;
+    height: 150px;
+    transition: all 2s;
+  }
+  .cajapadre .padreContacto .hijocontacto {
     font-size: 10px;
     width: 250px;
   }
   /*entregas*/
   .padreEntrega {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 200px 300px 300px;
-    height: 230vh;
-    grid-template-areas: "entrega entrega" "entrega entrega" "entrega entrega" "ubi ubi";
-  }
-  .padreEntrega .entrega {
-    grid-area: entrega;
-  }
-  .padreEntrega .ubicacion {
-    grid-area: ubi;
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+    padding: 10px;
   }
   .padreEntrega .entrega {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    width: 300px;
+    width: 370px;
     border: solid 1px gray;
     border-radius: 20px;
-    height: 640px;
+    height: 610px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .padreEntrega .entrega img {
+    height: 20px;
+    width: 20px;
+  }
+  .padreEntrega .entrega h4 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .padreEntrega .entrega h6 {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 15px;
+  }
+  .padreEntrega .entrega .hijoEntrega {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+  }
+  .padreEntrega .entrega .hijoEntrega .puntos {
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .padreEntrega .entrega .hijoEntrega .puntos h5 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .padreEntrega .entrega .hijoEntrega .puntos a {
+    text-decoration: none;
+    color: #13161c;
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+    border: 2px solid #0e1118;
   }
   .padreEntrega .padreUbi {
     display: flex;
+    flex-direction: column;
     width: 350px;
     height: 400px;
   }
@@ -764,7 +961,7 @@ body {
     flex-direction: column;
   }
   .padreEntrega .padreUbi .ubicacion iframe {
-    width: 360px;
+    width: 350px;
   }
 }
 
