@@ -874,7 +874,7 @@ body{
 
         /* class nosotros*/
         .caja{
-            height: 130vh;
+            height: 200vh;
     
         
             .padreInfo{
@@ -930,7 +930,7 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            height: 130vh;
+            height: 200vh;
     
                 .padreContacto{
                     display: grid;
@@ -995,7 +995,7 @@ body{
         .padreEntrega{
             display: flex;
             flex-direction: column;
-            height: 150vh;
+            height: 200vh;
             padding: 10px;
             
             .entrega{
@@ -1065,7 +1065,7 @@ body{
                     flex-direction: column;
                     
                         iframe{
-                            width: 350px;
+                            width: 320px;
                         }
                 }
         }
