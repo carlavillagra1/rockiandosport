@@ -902,7 +902,7 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 110vh;
   }
   .cajapadre .padreContacto .contacto {
     display: flex;
@@ -1003,7 +1003,7 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    width: 310px;
+    width: 320px;
     border: solid 1px gray;
     border-radius: 20px;
     height: 610px;
