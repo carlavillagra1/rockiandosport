@@ -175,9 +175,9 @@ body {
   font-weight: bolder;
   gap: 10px;
 }
-.cajapadre .padreContacto .contacto h1 {
+.cajapadre .padreContacto .contacto h4 {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   color: white;
   font-weight: bolder;
 }
@@ -223,26 +223,25 @@ body {
   border: solid 3px #daca4a;
   font-weight: bolder;
 }
-.cajapadre .galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 210px;
-  grid-gap: 20px;
-}
-.cajapadre .galeria .cajaimg {
-  background: #010e0e;
+.cajapadre .cajaperfil {
+  height: 500px;
+  width: 400px;
+  border: solid 3px #daca4a;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding: 10px;
+  border-radius: 10px;
 }
-.cajapadre .galeria .cajaimg .foton {
-  border: solid 3px #daca4a;
-  height: 180px;
-  width: 150px;
-  transition: all 5s;
+.cajapadre .cajaperfil iframe {
+  width: 300px;
+  height: 400px;
 }
-.cajapadre .galeria .cajaimg .foton:hover {
-  transform: scale(1.2);
+.cajapadre .cajaperfil h6 {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
 }
 
 /* class nosotros*/
@@ -252,7 +251,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
 }
 .caja .padreInfo {
   display: flex;
@@ -273,26 +272,26 @@ body {
   font-size: 20px;
   font-weight: bolder;
 }
-
-.cajaperfil {
-  height: 500px;
-  width: 400px;
-  border: solid 3px #daca4a;
+.caja .galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 210px;
+  grid-gap: 20px;
+}
+.caja .galeria .cajaimg {
+  background: #010e0e;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  padding: 10px;
-  border-radius: 10px;
 }
-.cajaperfil iframe {
-  width: 300px;
-  height: 400px;
+.caja .galeria .cajaimg .foton {
+  border: solid 3px #daca4a;
+  height: 180px;
+  width: 150px;
+  transition: all 5s;
 }
-.cajaperfil h6 {
-  text-align: center;
-  color: white;
-  font-weight: bolder;
+.caja .galeria .cajaimg .foton:hover {
+  transform: scale(1.2);
 }
 
 /* entregas*/
@@ -563,7 +562,8 @@ body {
   }
   /*nosotros*/
   .caja {
-    height: 130vh;
+    height: 350vh;
+    display: flex;
   }
   .caja .padreInfo {
     display: flex;
@@ -574,7 +574,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 590px;
+    height: 680px;
   }
   .caja .padreInfo img {
     height: 20px;
@@ -585,12 +585,36 @@ body {
     flex-direction: row;
     padding: 10px;
   }
+  .caja .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 280px;
+    grid-gap: 20px;
+    justify-content: space-evenly;
+  }
+  .caja .galeria .cajaimg {
+    background: #010e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .caja .galeria .cajaimg .foton {
+    border: solid 3px #daca4a;
+    height: 180px;
+    width: 150px;
+    margin: 10px;
+    transition: all 5s;
+  }
+  .caja .galeria .cajaimg .foton:hover {
+    transform: scale(1.2);
+  }
   /*contacto*/
   .cajapadre {
-    height: 150vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
   }
   .cajapadre .contacto {
     display: flex;
@@ -628,28 +652,25 @@ body {
     border: solid 3px #daca4a;
     font-weight: bolder;
   }
-  .cajapadre .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 280px;
-    grid-gap: 20px;
-    justify-content: space-evenly;
-  }
-  .cajapadre .galeria .cajaimg {
-    background: #010e0e;
+  .cajapadre .cajaperfil {
+    height: 500px;
+    width: 360px;
+    border: solid 3px #daca4a;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
   }
-  .cajapadre .galeria .cajaimg .foton {
-    border: solid 3px #daca4a;
-    height: 230px;
-    width: 230px;
-    margin: 10px;
-    transition: all 5s;
+  .cajapadre .cajaperfil iframe {
+    width: 300px;
+    height: 400px;
   }
-  .cajapadre .galeria .cajaimg .foton:hover {
-    transform: scale(1.2);
+  .cajapadre .cajaperfil h6 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
   }
   /*entregas*/
   .padreEntrega {
@@ -849,7 +870,7 @@ body {
   }
   /* class nosotros*/
   .caja {
-    height: 200vh;
+    height: 280vh;
   }
   .caja .padreInfo {
     display: flex;
@@ -860,7 +881,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 590px;
+    height: 690px;
   }
   .caja .padreInfo img {
     height: 20px;
@@ -871,25 +892,28 @@ body {
     flex-direction: row;
     padding: 10px;
   }
-  .caja .cajaperfil {
-    height: 500px;
-    width: 360px;
-    border: solid 3px #daca4a;
+  .caja .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+    grid-gap: 10px;
+    justify-content: space-evenly;
+  }
+  .caja .galeria .cajaimg {
+    background: #010e0e;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    padding: 10px;
-    border-radius: 10px;
   }
-  .caja .cajaperfil iframe {
-    width: 300px;
-    height: 400px;
+  .caja .galeria .cajaimg .foton {
+    border: solid 3px #daca4a;
+    height: 180px;
+    width: 150px;
+    margin: 10px;
+    transition: all 5s;
   }
-  .caja .cajaperfil h6 {
-    text-align: center;
-    color: white;
-    font-weight: bolder;
+  .caja .galeria .cajaimg .foton:hover {
+    transform: scale(1.2);
   }
   /*contacto*/
   .cajapadre {
@@ -909,13 +933,13 @@ body {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    height: 400px;
+    height: 600px;
     border: solid 1px #daca4a;
     border-radius: 20px;
     width: 350px;
     justify-content: center;
   }
-  .cajapadre .padreContacto .contacto h1 {
+  .cajapadre .padreContacto .contacto h4 {
     text-align: center;
     font-size: 35px;
     color: white;
@@ -968,28 +992,25 @@ body {
     border: solid 3px #daca4a;
     font-weight: bolder;
   }
-  .cajapadre .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 240px;
-    grid-gap: 10px;
-    justify-content: space-evenly;
-  }
-  .cajapadre .galeria .cajaimg {
-    background: #010e0e;
+  .cajapadre .cajaperfil {
+    height: 500px;
+    width: 360px;
+    border: solid 3px #daca4a;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
   }
-  .cajapadre .galeria .cajaimg .foton {
-    border: solid 3px #daca4a;
-    height: 180px;
-    width: 150px;
-    margin: 10px;
-    transition: all 5s;
+  .cajapadre .cajaperfil iframe {
+    width: 300px;
+    height: 400px;
   }
-  .cajapadre .galeria .cajaimg .foton:hover {
-    transform: scale(1.2);
+  .cajapadre .cajaperfil h6 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
   }
   /*entregas*/
   .padreEntrega {

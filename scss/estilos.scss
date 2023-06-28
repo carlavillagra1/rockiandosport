@@ -224,9 +224,9 @@ body{
             border: solid 5px $color1; 
             font-weight: bolder;
             gap: 10px;
-            h1{
+            h4{
                 text-align: center;
-                font-size: 35px;
+                font-size: 30px;
                 color:$colortexto;
                 font-weight: bolder;
             
@@ -284,37 +284,31 @@ body{
             }
             }
     }    
-}
-.galeria{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 210px;
-    grid-gap: 20px;
+ }
+ .cajaperfil{
+        height: 500px;
+        width: 400px;
+        border: solid 3px $color1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
 
 
-        .cajaimg{
-            background: $color2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        
-        
-        .foton{
-            border: solid 3px $color1;
-            height: 180px;
-            width: 150px;
-            transition: all 5s;
-
-            &:hover{
-                transform: scale(1.2);
-            }
-           
-
-}
-        }
-     }
+            iframe{
+                width: 300px;
+                height: 400px;
+    }
+    h6{
+        text-align: center;
+        color: $colortexto;
+        font-weight: bolder;
+    }
           
     }
+}
 /* class nosotros*/
 .caja{
     display: flex;
@@ -322,7 +316,7 @@ body{
     flex-wrap: wrap;
     justify-content:space-evenly;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
     
         .padreInfo{
             @extend .claseinfo;
@@ -349,30 +343,38 @@ body{
             
             }
     }
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 210px;
+        grid-gap: 20px;
+    
+    
+            .cajaimg{
+                background: $color2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            
+            .foton{
+                border: solid 3px $color1;
+                height: 180px;
+                width: 150px;
+                transition: all 5s;
+    
+                &:hover{
+                    transform: scale(1.2);
+                }
+               
+    
+    }
+            }
+         }
 
 }
-    .cajaperfil{
-        height: 500px;
-        width: 400px;
-        border: solid 3px $color1;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
+   
 
-
-            iframe{
-                width: 300px;
-                height: 400px;
-    }
-    h6{
-        text-align: center;
-        color: $colortexto;
-        font-weight: bolder;
-    }
-}
     
 
 /* entregas*/
@@ -650,7 +652,9 @@ body{
         }
     /*nosotros*/
     .caja{
-        height: 130vh;
+        height: 350vh;
+        display: flex;
+
 
     
         .padreInfo{
@@ -662,7 +666,7 @@ body{
             border-radius: 20px;
             padding: 20px;
             margin: 10px;
-            height: 590px;
+            height: 680px;
 
                 img{ 
                     height: 20px;
@@ -675,14 +679,46 @@ body{
         }
         
     }
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 280px;
+        grid-gap: 20px;
+        justify-content: space-evenly;
+    
+    
+            .cajaimg{
+                background: $color2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            
+            .foton{
+                border: solid 3px $color1;
+                height: 180px;
+                width: 150px;
+                margin: 10px;
+                transition: all 5s;
+    
+                &:hover{
+                    transform: scale(1.2);
+                    
+                }
+               
+    
+    }
+            }
+         }
 }
 
         /*contacto*/
         .cajapadre{
-            height: 150vh;
+            height: 200vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
 
         .contacto{
             display: flex;
@@ -725,38 +761,29 @@ body{
 }
  
     }
+    .cajaperfil{
+        height: 500px;
+        width: 360px;
+        border: solid 3px $color1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
 
-    .galeria{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 280px;
-        grid-gap: 20px;
-        justify-content: space-evenly;
-    
-    
-            .cajaimg{
-                background: $color2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            
-            
-            .foton{
-                border: solid 3px $color1;
-                height: 230px;
-                width: 230px;
-                margin: 10px;
-                transition: all 5s;
-    
-                &:hover{
-                    transform: scale(1.2);
-                    
-                }
-               
-    
+
+            iframe{
+                width: 300px;
+                height: 400px;
     }
-            }
-         }
+    h6{
+        text-align: center;
+        color: $colortexto;
+        font-weight: bolder;
+    }
+}
+
               
         }
         /*entregas*/
@@ -943,7 +970,7 @@ body{
 
         /* class nosotros*/
         .caja{
-            height: 200vh;
+            height: 280vh;
     
         
             .padreInfo{
@@ -955,7 +982,7 @@ body{
                 border-radius: 20px;
                 padding: 20px;
                 margin: 10px;
-                height: 590px;
+                height: 690px;
     
                     img{ 
                         height: 20px;
@@ -968,28 +995,38 @@ body{
             }
             
         }
-        .cajaperfil{
-            height: 500px;
-            width: 360px;
-            border: solid 3px $color1;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            border-radius: 10px;
-    
-    
-                iframe{
-                    width: 300px;
-                    height: 400px;
+        .galeria{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 240px;
+            grid-gap: 10px;
+            justify-content: space-evenly;
+        
+        
+                .cajaimg{
+                    background: $color2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                
+                
+                .foton{
+                    border: solid 3px $color1;
+                    height: 180px;
+                    width: 150px;
+                    margin: 10px;
+                    transition: all 5s;
+        
+                    &:hover{
+                        transform: scale(1.2);
+                        
+                    }
+                
+        
         }
-        h6{
-            text-align: center;
-            color: $colortexto;
-            font-weight: bolder;
+                }
         }
-    }
+       
     }
 
 
@@ -1012,13 +1049,13 @@ body{
                     flex-direction: column;
                     align-items: center;
                     flex-wrap: wrap;
-                    height: 400px;
+                    height: 600px;
                     border: solid 1px $color1;
                     border-radius: 20px;
                     width: 350px;
                     justify-content: center;
 
-                    h1{
+                    h4{
                         text-align: center;
                         font-size: 35px;
                         color:$colortexto;
@@ -1086,37 +1123,29 @@ body{
             }
 
     }
-    .galeria{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 240px;
-        grid-gap: 10px;
-        justify-content: space-evenly;
-    
-    
-            .cajaimg{
-                background: $color2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            
-            
-            .foton{
-                border: solid 3px $color1;
-                height: 180px;
-                width: 150px;
-                margin: 10px;
-                transition: all 5s;
-    
-                &:hover{
-                    transform: scale(1.2);
-                    
-                }
-            
-    
+    .cajaperfil{
+        height: 500px;
+        width: 360px;
+        border: solid 3px $color1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+
+
+            iframe{
+                width: 300px;
+                height: 400px;
     }
-            }
+    h6{
+        text-align: center;
+        color: $colortexto;
+        font-weight: bolder;
     }
+}
+    
     
 }
 
