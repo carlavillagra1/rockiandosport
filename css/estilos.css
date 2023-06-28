@@ -227,6 +227,7 @@ body {
   height: 500px;
   width: 400px;
   border: solid 3px #daca4a;
+  background: #3d432d;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -656,6 +657,7 @@ body {
     height: 500px;
     width: 360px;
     border: solid 3px #daca4a;
+    background: #3d432d;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -996,6 +998,7 @@ body {
     height: 500px;
     width: 360px;
     border: solid 3px #daca4a;
+    background: #3d432d;
     display: flex;
     justify-content: center;
     flex-direction: column;
