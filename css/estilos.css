@@ -1031,7 +1031,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     width: 390px;
-    border: solid 1px gray;
     border-radius: 20px;
     height: 610px;
     margin: 10px;
