@@ -872,7 +872,7 @@ body {
   }
   /* class nosotros*/
   .caja {
-    height: 280vh;
+    height: 290vh;
   }
   .caja .padreInfo {
     display: flex;
@@ -883,7 +883,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 690px;
+    height: 850px;
   }
   .caja .padreInfo img {
     height: 20px;
@@ -893,6 +893,9 @@ body {
     display: flex;
     flex-direction: row;
     padding: 10px;
+  }
+  .caja .padreInfo .hijoInfo h4 {
+    font-size: 20px;
   }
   .caja .galeria {
     display: grid;

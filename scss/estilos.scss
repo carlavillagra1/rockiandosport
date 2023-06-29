@@ -972,7 +972,7 @@ body{
 
         /* class nosotros*/
         .caja{
-            height: 280vh;
+            height: 290vh;
     
         
             .padreInfo{
@@ -984,7 +984,7 @@ body{
                 border-radius: 20px;
                 padding: 20px;
                 margin: 10px;
-                height: 690px;
+                height: 850px;
     
                     img{ 
                         height: 20px;
@@ -994,6 +994,10 @@ body{
                 display: flex;
                 flex-direction: row;
                 padding: 10px;
+                
+                    h4{
+                        font-size: 20px;
+                    }
             }
             
         }
