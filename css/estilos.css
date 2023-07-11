@@ -16,7 +16,7 @@
   border: solid 3px #daca4a;
 }
 
-.claseinfo, .padreEntrega .entrega, .caja .padreInfo, .cajapadre .padreContacto .contacto {
+.claseinfo, .padreEntrega .hijo .entrega, .caja .padreInfo, .cajapadre .padreContacto .contacto {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -133,18 +133,26 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.padre img {
-  height: 200px;
-  width: 200px;
-  padding: 10px;
-}
 .padre .hijo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   border: solid 3px #daca4a;
-  height: 50vh;
+  height: 52vh;
   border-radius: 10px;
   text-align: center;
   color: white;
   width: 250px;
+}
+.padre .hijo img {
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+}
+.padre .hijo h5 {
+  font-size: 20px;
+  padding: 10px;
 }
 .padre .hijo .vermas {
   display: flex;
@@ -153,7 +161,6 @@ body {
   color: white;
   font-weight: bolder;
   border-radius: 40px;
-  padding: 26px 10px;
 }
 
 /*class contacto*/
@@ -297,46 +304,51 @@ body {
 
 /* entregas*/
 .padreEntrega {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   height: 100vh;
 }
-.padreEntrega .entrega {
+.padreEntrega .hijo {
+  display: flex;
+  flex-direction: row;
+}
+.padreEntrega .hijo .entrega {
   background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
 }
-.padreEntrega .entrega img {
+.padreEntrega .hijo .entrega img {
   height: 20px;
   width: 20px;
 }
-.padreEntrega .entrega h4 {
+.padreEntrega .hijo .entrega h4 {
   font-size: 20px;
   font-weight: bolder;
 }
-.padreEntrega .entrega h6 {
+.padreEntrega .hijo .entrega h6 {
   font-size: 30px;
   font-weight: bolder;
   text-align: center;
   padding: 15px;
 }
-.padreEntrega .entrega .hijoEntrega {
+.padreEntrega .hijo .entrega .hijoEntrega {
   display: flex;
   flex-direction: row;
   padding: 10px;
   gap: 10px;
 }
-.padreEntrega .entrega .hijoEntrega .puntos {
+.padreEntrega .hijo .entrega .hijoEntrega .puntos {
   width: 410px;
   display: flex;
   justify-content: space-between;
 }
-.padreEntrega .entrega .hijoEntrega .puntos a {
+.padreEntrega .hijo .entrega .hijoEntrega .puntos a {
   text-decoration: none;
   color: #13161c;
   padding: 0 10px 0 10px;
   font-weight: bold;
   border: 2px solid #0e1118;
 }
-.padreEntrega .entrega .hijoredes {
+.padreEntrega .hijo .entrega .hijoredes {
   display: flex;
   flex-direction: row;
   width: 400px;
@@ -345,23 +357,23 @@ body {
   align-items: center;
   padding: 10px;
 }
-.padreEntrega .entrega .hijoredes a {
+.padreEntrega .hijo .entrega .hijoredes a {
   text-decoration: none;
   color: #0e1118;
   font-weight: bolder;
 }
-.padreEntrega .entrega .hijoredes img {
+.padreEntrega .hijo .entrega .hijoredes img {
   height: 30px;
   width: 30px;
 }
 
 .padreUbi {
   display: flex;
-  width: 630px;
-  height: 490px;
+  width: 635px;
+  height: 480px;
   padding: 10px;
   margin: 10px;
-  background-color: #010e0e;
+  border: solid 3px #daca4a;
 }
 .padreUbi .ubicacion {
   flex-direction: column;
@@ -546,24 +558,31 @@ body {
     align-items: center;
   }
   .padre .hijo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     border: solid 3px #daca4a;
     height: 39vh;
     border-radius: 10px;
     text-align: center;
-    width: 200px;
+    width: 250px;
   }
-  .padre .hijo .vermas {
+  .padre .hijo h5 {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .padre .hijo h5 .vermas {
     display: flex;
     flex-direction: row;
     justify-content: center;
     color: white;
     font-weight: bolder;
     border-radius: 40px;
-    padding: 20px 10px;
   }
   /*nosotros*/
   .caja {
-    height: 350vh;
+    height: 170vh;
     display: flex;
   }
   .caja .padreInfo {
@@ -575,7 +594,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 680px;
+    height: 600px;
   }
   .caja .padreInfo img {
     height: 20px;
@@ -611,7 +630,7 @@ body {
   }
   /*contacto*/
   .cajapadre {
-    height: 200vh;
+    height: 130vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -655,7 +674,7 @@ body {
   }
   .cajapadre .cajaperfil {
     height: 500px;
-    width: 360px;
+    width: 540px;
     border: solid 3px #daca4a;
     background: #3d432d;
     display: flex;
@@ -678,10 +697,17 @@ body {
   .padreEntrega {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 120vh;
     padding: 10px;
   }
-  .padreEntrega .entrega {
+  .padreEntrega .hijo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .padreEntrega .hijo .entrega {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -691,18 +717,20 @@ body {
     height: 580px;
     margin: 10px;
   }
-  .padreUbi {
+  .padreEntrega .padreUbi {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 400px;
+    width: 555px;
+    height: 475px;
     background: #010e0e;
+    border: solid 3px #daca4a;
   }
-  .padreUbi .ubicacion {
+  .padreEntrega .padreUbi .ubicacion {
     flex-direction: column;
+    width: 500px;
   }
-  .padreUbi .ubicacion iframe {
-    width: 560px;
+  .padreEntrega .padreUbi .ubicacion iframe {
+    width: 530px;
   }
 }
 /*tamaño celular */
@@ -842,29 +870,34 @@ body {
     font-weight: bolder;
   }
   .padre {
-    height: 180vh;
+    height: 280vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
   }
   .padre .hijo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     border: solid 3px #daca4a;
-    height: 50vh;
+    height: 40vh;
     border-radius: 10px;
-    width: 160px;
+    width: 230px;
     gap: 10px;
-    justify-content: center;
   }
-  .padre .hijo img {
-    width: 150px;
-    height: 170px;
+  .padre .hijo h5 {
+    font-size: 20px;
+    padding: 10px;
   }
-  .padre .hijo .vermas {
+  .padre .hijo h5 img {
+    width: 200px;
+    height: 210px;
+  }
+  .padre .hijo h5 .vermas {
     display: flex;
     flex-direction: column;
     color: white;
@@ -872,7 +905,7 @@ body {
   }
   /* class nosotros*/
   .caja {
-    height: 290vh;
+    height: 170vh;
   }
   .caja .padreInfo {
     display: flex;
@@ -883,7 +916,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 850px;
+    height: 750px;
   }
   .caja .padreInfo img {
     height: 20px;
@@ -925,23 +958,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 250vh;
+    flex-wrap: wrap;
+    height: 150vh;
   }
   .cajapadre .padreContacto {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 50vh;
   }
   .cajapadre .padreContacto .contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    height: 600px;
+    height: 550px;
     border: solid 1px #daca4a;
     border-radius: 20px;
-    width: 350px;
+    width: 320px;
     justify-content: center;
   }
   .cajapadre .padreContacto .contacto h4 {
@@ -999,7 +1033,7 @@ body {
   }
   .cajapadre .cajaperfil {
     height: 500px;
-    width: 360px;
+    width: 350px;
     border: solid 3px #daca4a;
     background: #3d432d;
     display: flex;
@@ -1022,10 +1056,15 @@ body {
   .padreEntrega {
     display: flex;
     flex-direction: column;
-    height: 200vh;
+    height: 180vh;
     padding: 10px;
   }
-  .padreEntrega .entrega {
+  .padreEntrega .hijo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .padreEntrega .hijo .entrega {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1036,46 +1075,46 @@ body {
     margin: 10px;
     padding: 10px;
   }
-  .padreEntrega .entrega img {
+  .padreEntrega .hijo .entrega img {
     height: 20px;
     width: 20px;
   }
-  .padreEntrega .entrega h4 {
+  .padreEntrega .hijo .entrega h4 {
     font-size: 20px;
     font-weight: bolder;
   }
-  .padreEntrega .entrega h6 {
+  .padreEntrega .hijo .entrega h6 {
     font-size: 30px;
     font-weight: bolder;
     display: flex;
     text-align: center;
     justify-content: center;
   }
-  .padreEntrega .entrega .hijoEntrega {
+  .padreEntrega .hijo .entrega .hijoEntrega {
     display: flex;
     flex-direction: row;
     padding: 10px;
     gap: 10px;
     width: 300px;
   }
-  .padreEntrega .entrega .hijoEntrega .puntos {
+  .padreEntrega .hijo .entrega .hijoEntrega .puntos {
     width: 300px;
     display: flex;
     justify-content: space-between;
   }
-  .padreEntrega .entrega .hijoEntrega .puntos h5 {
+  .padreEntrega .hijo .entrega .hijoEntrega .puntos h5 {
     font-size: 13px;
     font-weight: bold;
   }
-  .padreEntrega .entrega .hijoEntrega .puntos a {
+  .padreEntrega .hijo .entrega .hijoEntrega .puntos a {
     text-decoration: none;
     color: #13161c;
-    padding: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
     font-weight: bold;
     border: 2px solid #0e1118;
     font-size: 12px;
   }
-  .padreEntrega .entrega .hijoredes {
+  .padreEntrega .hijo .entrega .hijoredes {
     display: flex;
     flex-direction: row;
     width: 260px;
@@ -1084,25 +1123,26 @@ body {
     align-items: center;
     padding: 10px;
   }
-  .padreEntrega .entrega .hijoredes a {
+  .padreEntrega .hijo .entrega .hijoredes a {
     text-decoration: none;
     color: #0e1118;
     font-weight: bolder;
   }
-  .padreEntrega .entrega .hijoredes img {
+  .padreEntrega .hijo .entrega .hijoredes img {
     height: 30px;
     width: 30px;
   }
-  .padreEntrega .padreUbi {
+  .padreEntrega .hijo .padreUbi {
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 400px;
+    height: 475px;
+    border: solid 3px #daca4a;
   }
-  .padreEntrega .padreUbi .ubicacion {
+  .padreEntrega .hijo .padreUbi .ubicacion {
     flex-direction: column;
   }
-  .padreEntrega .padreUbi .ubicacion iframe {
+  .padreEntrega .hijo .padreUbi .ubicacion iframe {
     width: 320px;
   }
 }
