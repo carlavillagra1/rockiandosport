@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   border: solid 3px #daca4a;
+  letter-spacing: 2px;
 }
 
 .claseinfo, .padreEntrega .hijo .entrega, .caja .padreInfo, .cajapadre .padreContacto .contacto {
@@ -59,10 +60,6 @@ body {
 }
 .headerr .menu .nav-link:hover {
   color: #daca4a;
-}
-
-.banner {
-  margin: 0;
 }
 
 .d-block {
@@ -150,7 +147,7 @@ body {
   width: 200px;
   padding: 10px;
 }
-.padre .hijo h5 {
+.padre .hijo h2 {
   font-size: 20px;
   padding: 10px;
 }
@@ -182,11 +179,13 @@ body {
   font-weight: bolder;
   gap: 10px;
 }
-.cajapadre .padreContacto .contacto h4 {
+.cajapadre .padreContacto .contacto h2 {
   text-align: center;
   font-size: 30px;
   color: white;
   font-weight: bolder;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .cajapadre .padreContacto .contacto label {
   font-size: 20px;
@@ -246,10 +245,11 @@ body {
   width: 300px;
   height: 400px;
 }
-.cajapadre .cajaperfil h6 {
+.cajapadre .cajaperfil h3 {
   text-align: center;
   color: white;
   font-weight: bolder;
+  font-size: 20px;
 }
 
 /* class nosotros*/
@@ -276,9 +276,8 @@ body {
   padding: 10px;
   gap: 10px;
 }
-.caja .padreInfo .hijoInfo h4 {
+.caja .padreInfo .hijoInfo h2 {
   font-size: 20px;
-  font-weight: bolder;
 }
 .caja .galeria {
   display: grid;
@@ -296,6 +295,7 @@ body {
   border: solid 3px #daca4a;
   height: 180px;
   width: 150px;
+  margin: 10px;
   transition: all 5s;
 }
 .caja .galeria .cajaimg .foton:hover {
@@ -315,20 +315,22 @@ body {
 }
 .padreEntrega .hijo .entrega {
   background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
+  height: 515px;
 }
 .padreEntrega .hijo .entrega img {
   height: 20px;
   width: 20px;
 }
-.padreEntrega .hijo .entrega h4 {
+.padreEntrega .hijo .entrega h3 {
   font-size: 20px;
-  font-weight: bolder;
 }
-.padreEntrega .hijo .entrega h6 {
-  font-size: 30px;
+.padreEntrega .hijo .entrega h2 {
+  font-size: 26px;
   font-weight: bolder;
   text-align: center;
   padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .padreEntrega .hijo .entrega .hijoEntrega {
   display: flex;
@@ -347,6 +349,10 @@ body {
   padding: 0 10px 0 10px;
   font-weight: bold;
   border: 2px solid #0e1118;
+}
+.padreEntrega .hijo .entrega .hijoEntrega .puntos h4 {
+  font-size: 20px;
+  font-weight: bolder;
 }
 .padreEntrega .hijo .entrega .hijoredes {
   display: flex;
@@ -373,7 +379,6 @@ body {
   height: 480px;
   padding: 10px;
   margin: 10px;
-  border: solid 3px #daca4a;
 }
 .padreUbi .ubicacion {
   flex-direction: column;
@@ -405,7 +410,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.container-fluid .footer .redes h5 {
+.container-fluid .footer .redes h3 {
   font-size: 15px;
   font-weight: bolder;
 }
@@ -425,9 +430,12 @@ body {
   .headerr {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    margin: 0;
     padding: 10px;
     justify-content: space-evenly;
-    align-items: center;
     width: 100%;
     margin: 0;
   }
@@ -453,25 +461,16 @@ body {
   .headerr .menu .navbar-nav {
     text-align: center;
   }
-  .headerr .menu .nav-link {
-    color: antiquewhite;
-  }
   .d-block {
     background-size: cover;
     height: 50vh;
     width: 20%;
-    padding: 10px;
   }
   .secciones {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    height: 70vh;
-    justify-content: center;
-  }
-  .secciones div {
-    display: flex;
-    flex-direction: row;
+    height: 90vh;
     justify-content: center;
   }
   .btnProd {
@@ -527,70 +526,21 @@ body {
     align-items: center;
   }
   /*productos*/
-  .buscador {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
-    gap: 10px;
-  }
-  .buscador input {
-    height: 40px;
-    width: 400px;
-    border-radius: 40px;
-  }
-  .buscador button {
-    height: 39px;
-    width: 120px;
-    font-size: 18px;
-    color: antiquewhite;
-    background: #010e0e;
-    border-radius: 40px;
-    border: solid 3px #daca4a;
-    font-weight: bolder;
-  }
   .padre {
-    height: 120vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    height: 200vh;
   }
   .padre .hijo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: solid 3px #daca4a;
-    height: 39vh;
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-  }
-  .padre .hijo h5 {
-    font-size: 20px;
-    padding: 10px;
-  }
-  .padre .hijo h5 .vermas {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-    font-weight: bolder;
-    border-radius: 40px;
+    height: 55vh;
   }
   /*nosotros*/
   .caja {
-    height: 170vh;
-    display: flex;
+    height: 280vh;
   }
   .caja .padreInfo {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 550px;
-    background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
@@ -600,37 +550,13 @@ body {
     height: 20px;
     width: 20px;
   }
-  .caja .padreInfo .hijoInfo {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-  }
   .caja .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 280px;
-    grid-gap: 20px;
     justify-content: space-evenly;
-  }
-  .caja .galeria .cajaimg {
-    background: #010e0e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .caja .galeria .cajaimg .foton {
-    border: solid 3px #daca4a;
-    height: 180px;
-    width: 150px;
-    margin: 10px;
-    transition: all 5s;
-  }
-  .caja .galeria .cajaimg .foton:hover {
-    transform: scale(1.2);
   }
   /*contacto*/
   .cajapadre {
-    height: 130vh;
+    height: 210vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -643,10 +569,8 @@ body {
     flex-wrap: wrap;
     height: 350px;
     padding: 20px;
-    border: solid 1px gray;
     border-radius: 20px;
     width: 540px;
-    background: #babdc4;
   }
   .cajapadre .contacto .hijocontacto {
     font-size: 10px;
@@ -655,50 +579,17 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .cajapadre .contacto .hijocontacto .button {
-    display: flex;
-    justify-content: center;
-  }
   .cajapadre .contacto .hijocontacto .button button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
-    color: white;
-    background: #010e0e;
     text-align: center;
     font-size: 15px;
-    border-radius: 10px;
-    border: solid 3px #daca4a;
-    font-weight: bolder;
   }
   .cajapadre .cajaperfil {
-    height: 500px;
     width: 540px;
-    border: solid 3px #daca4a;
-    background: #3d432d;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  .cajapadre .cajaperfil iframe {
-    width: 300px;
-    height: 400px;
-  }
-  .cajapadre .cajaperfil h6 {
-    text-align: center;
-    color: white;
-    font-weight: bolder;
   }
   /*entregas*/
   .padreEntrega {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 120vh;
+    height: 220vh;
     padding: 10px;
   }
   .padreEntrega .hijo {
@@ -723,10 +614,8 @@ body {
     width: 555px;
     height: 475px;
     background: #010e0e;
-    border: solid 3px #daca4a;
   }
   .padreEntrega .padreUbi .ubicacion {
-    flex-direction: column;
     width: 500px;
   }
   .padreEntrega .padreUbi .ubicacion iframe {
@@ -776,7 +665,7 @@ body {
   .secciones {
     display: flex;
     flex-direction: column;
-    height: 140vh;
+    height: 190vh;
     padding: 10px;
     justify-content: space-evenly;
   }
@@ -850,8 +739,6 @@ body {
   }
   /*productos*/
   .buscador {
-    flex-direction: row;
-    gap: 10px;
     padding: 30px;
   }
   .buscador input {
@@ -862,109 +749,63 @@ body {
   .buscador button {
     height: 33px;
     width: 100px;
-    font-size: 18px;
-    color: antiquewhite;
-    background: #010e0e;
-    border-radius: 40px;
-    border: solid 3px #daca4a;
-    font-weight: bolder;
   }
   .padre {
-    height: 280vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .padre .hijo {
-    display: flex;
+    height: 430vh;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+  }
+  .padre .hijo {
     flex-wrap: wrap;
-    border: solid 3px #daca4a;
-    height: 40vh;
-    border-radius: 10px;
+    height: 70vh;
     width: 230px;
     gap: 10px;
   }
-  .padre .hijo h5 {
-    font-size: 20px;
-    padding: 10px;
-  }
-  .padre .hijo h5 img {
-    width: 200px;
+  .padre .hijo img {
     height: 210px;
   }
-  .padre .hijo h5 .vermas {
-    display: flex;
+  .padre .hijo .vermas {
     flex-direction: column;
-    color: white;
-    font-weight: bolder;
   }
   /* class nosotros*/
   .caja {
-    height: 170vh;
+    height: 290vh;
   }
   .caja .padreInfo {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 400px;
+    width: 320px;
     background: linear-gradient(70deg, rgb(93, 77, 19) 0%, rgb(218, 202, 74) 47%, rgb(93, 77, 19) 89%);
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
-    height: 780px;
+    height: 550px;
   }
   .caja .padreInfo img {
     height: 20px;
     width: 20px;
   }
-  .caja .padreInfo .hijoInfo {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-  }
-  .caja .padreInfo .hijoInfo h4 {
-    font-size: 20px;
+  .caja .padreInfo .hijoInfo h2 {
+    font-size: 15px;
   }
   .caja .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 240px;
     grid-gap: 10px;
     justify-content: space-evenly;
   }
-  .caja .galeria .cajaimg {
-    background: #010e0e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .caja .galeria .cajaimg .foton {
-    border: solid 3px #daca4a;
-    height: 180px;
-    width: 150px;
-    margin: 10px;
-    transition: all 5s;
-  }
-  .caja .galeria .cajaimg .foton:hover {
-    transform: scale(1.2);
+    height: 150px;
+    width: 120px;
   }
   /*contacto*/
   .cajapadre {
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
-    height: 150vh;
+    height: 240vh;
   }
   .cajapadre .padreContacto {
-    display: grid;
-    justify-content: center;
-    align-items: center;
     height: 50vh;
   }
   .cajapadre .padreContacto .contacto {
@@ -972,25 +813,16 @@ body {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    height: 550px;
+    height: 480px;
     border: solid 1px #daca4a;
     border-radius: 20px;
     width: 320px;
     justify-content: center;
   }
-  .cajapadre .padreContacto .contacto h4 {
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    font-weight: bolder;
-  }
-  .cajapadre .padreContacto .contacto label {
-    font-size: 20px;
-    display: block;
-    color: white;
+  .cajapadre .padreContacto .contacto h2 {
+    font-size: 25px;
   }
   .cajapadre .padreContacto .contacto input {
-    height: 20px;
     width: 110px;
     transition: all 2s;
   }
@@ -1014,53 +846,23 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .cajapadre .padreContacto .hijocontacto .button {
-    display: flex;
-    justify-content: center;
-  }
   .cajapadre .padreContacto .hijocontacto .button button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     color: white;
-    background: #010e0e;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 10px;
-    border: solid 3px #daca4a;
-    font-weight: bolder;
   }
   .cajapadre .cajaperfil {
-    height: 500px;
-    width: 350px;
-    border: solid 3px #daca4a;
-    background: #3d432d;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
+    width: 320px;
   }
-  .cajapadre .cajaperfil iframe {
-    width: 300px;
-    height: 400px;
-  }
-  .cajapadre .cajaperfil h6 {
-    text-align: center;
-    color: white;
-    font-weight: bolder;
+  .cajapadre .cajaperfil h3 {
+    font-size: 15px;
   }
   /*entregas*/
   .padreEntrega {
-    display: flex;
     flex-direction: column;
-    height: 180vh;
-    padding: 10px;
+    height: 220vh;
+    margin: 0;
   }
   .padreEntrega .hijo {
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -1074,76 +876,38 @@ body {
     height: 610px;
     margin: 10px;
     padding: 10px;
-  }
-  .padreEntrega .hijo .entrega img {
-    height: 20px;
-    width: 20px;
-  }
-  .padreEntrega .hijo .entrega h4 {
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  .padreEntrega .hijo .entrega h6 {
-    font-size: 30px;
-    font-weight: bolder;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    height: 500px;
   }
   .padreEntrega .hijo .entrega .hijoEntrega {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    gap: 10px;
     width: 300px;
+  }
+  .padreEntrega .hijo .entrega .hijoEntrega h3 {
+    font-size: 15px;
   }
   .padreEntrega .hijo .entrega .hijoEntrega .puntos {
     width: 300px;
-    display: flex;
-    justify-content: space-between;
   }
-  .padreEntrega .hijo .entrega .hijoEntrega .puntos h5 {
+  .padreEntrega .hijo .entrega .hijoEntrega .puntos h4 {
     font-size: 13px;
-    font-weight: bold;
   }
   .padreEntrega .hijo .entrega .hijoEntrega .puntos a {
-    text-decoration: none;
-    color: #13161c;
     padding: 0 5px 0 5px;
-    font-weight: bold;
-    border: 2px solid #0e1118;
     font-size: 12px;
   }
   .padreEntrega .hijo .entrega .hijoredes {
-    display: flex;
-    flex-direction: row;
     width: 260px;
     justify-content: center;
-    gap: 10px;
-    align-items: center;
-    padding: 10px;
-  }
-  .padreEntrega .hijo .entrega .hijoredes a {
-    text-decoration: none;
-    color: #0e1118;
-    font-weight: bolder;
-  }
-  .padreEntrega .hijo .entrega .hijoredes img {
-    height: 30px;
-    width: 30px;
   }
   .padreEntrega .hijo .padreUbi {
-    display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 310px;
     height: 475px;
-    border: solid 3px #daca4a;
   }
   .padreEntrega .hijo .padreUbi .ubicacion {
-    flex-direction: column;
+    width: 100%;
   }
   .padreEntrega .hijo .padreUbi .ubicacion iframe {
-    width: 320px;
+    width: 290px;
   }
 }
 
