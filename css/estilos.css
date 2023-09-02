@@ -123,7 +123,7 @@ body {
 }
 
 .padre {
-  height: 110vh;
+  height: 150vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -133,10 +133,10 @@ body {
 .padre .hijo {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border: solid 3px #daca4a;
-  height: 52vh;
+  height: 70vh;
   border-radius: 10px;
   text-align: center;
   color: white;
@@ -148,16 +148,18 @@ body {
   padding: 10px;
 }
 .padre .hijo h2 {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 15px;
 }
-.padre .hijo .vermas {
+.padre .hijo .botonComprar {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: white;
+}
+.padre .hijo .botonComprar .btncomprar {
+  width: 150px;
+  background: #daca4a;
   font-weight: bolder;
   border-radius: 40px;
+  padding: 10px;
+  font-size: 15px;
 }
 
 /*class contacto*/
