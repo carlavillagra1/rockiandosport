@@ -71,6 +71,55 @@ btnBuscar.addEventListener("click", (e) => {
 
 const carrito = [];
 
+
+function agregarAlcarrito(id) {
+    const productoEncontrado = productos.find(prod => prod.id === parseInt(id));
+    const carritoItem = carrito.find(item => item.producto.id === productoEncontrado.id);
+
+    if (carritoItem) {
+        carritoItem.cantidad++; // Incrementa la cantidad si el producto ya está en el carrito
+    } else {
+        carrito.push({ producto: productoEncontrado, cantidad: 1 }); // Agrégalo como un nuevo ítem con cantidad 1
+    }
+
+    mostrarCarrito();
+}
+
+function mostrarCarrito (){
+    const contenedorCarrito = document.querySelector("#contenedor-carrito");
+    contenedorCarrito.innerHTML ="";
+    carrito.forEach(item => {
+        const cajacarrito = document.createElement("div");
+        cajacarrito.innerHTML = `
+            <p>Producto: ${item.producto.nombre}</p>
+            <p>Cantidad: ${item.cantidad}</p>
+            <p>Precio Unitario: $${item.producto.precio}</p>
+            <p>Total: $${item.producto.precio * item.cantidad}</p>
+        `;
+        contenedorCarrito.appendChild(cajacarrito);
+    });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function agregarAlcarrito(id) {
 
 const existe = carrito.some(prod => prod.id === parseInt(id));
@@ -83,4 +132,4 @@ else{
 
 }
 console.log(carrito);
-}
+}*/
