@@ -133,7 +133,7 @@ body {
 }
 
 .padre {
-  height: 150vh;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -146,19 +146,19 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border: solid 3px #daca4a;
-  height: 70vh;
+  height: 50vh;
   border-radius: 10px;
   text-align: center;
   color: white;
-  width: 250px;
+  width: 200px;
 }
 .padre .hijo img {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: 150px;
   padding: 10px;
 }
 .padre .hijo h2 {
-  font-size: 15px;
+  font-size: 12px;
 }
 .padre .hijo .botonComprar {
   display: flex;
@@ -169,20 +169,22 @@ body {
   font-weight: bolder;
   border-radius: 40px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 10px;
   border: solid 1px #daca4a;
 }
 
 /*class carrito*/
 .carrito {
   height: 50vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: block;
   align-items: center;
   color: #daca4a;
-  font-size: 12px;
+  font-size: 14px;
+  background: #3d432d;
+  width: 500px;
+}
+.carrito h1 {
+  font-size: 16px;
 }
 
 /*class contacto*/

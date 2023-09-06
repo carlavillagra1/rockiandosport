@@ -1,6 +1,7 @@
 const btnBuscar = document.querySelector("#btnbuscar");
 inputIngreso = document.querySelector("#ingreso");
 const contenedor = document.querySelector("#contenedor");
+const botonCarrito = document.querySelector("#btnCarrito")
 console.log(productos);
 
 
@@ -82,54 +83,44 @@ function agregarAlcarrito(id) {
         carrito.push({ producto: productoEncontrado, cantidad: 1 }); // Agrégalo como un nuevo ítem con cantidad 1
     }
 
-    mostrarCarrito();
-}
 
-function mostrarCarrito (){
-    const contenedorCarrito = document.querySelector("#contenedor-carrito");
-    contenedorCarrito.innerHTML ="";
+}
+const contenedorCarrito = document.querySelector("#contenedor-carrito");
+
+
+function mostrarCarrito() {
+    contenedorCarrito.innerHTML = "<h1> Carrito de compras</h1>";
     carrito.forEach(item => {
         const cajacarrito = document.createElement("div");
         cajacarrito.innerHTML = `
             <p>Producto: ${item.producto.nombre}</p>
             <p>Cantidad: ${item.cantidad}</p>
             <p>Precio Unitario: $${item.producto.precio}</p>
-            <p>Total: $${item.producto.precio * item.cantidad}</p>
+            <p> Total: $${item.producto.precio * item.cantidad}</p>
+            
         `;
+
+
         contenedorCarrito.appendChild(cajacarrito);
     });
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function agregarAlcarrito(id) {
-
-const existe = carrito.some(prod => prod.id === parseInt(id));
-if (existe) {
-        carrito.map(prod => prod.cantidad ++)
 }
-else{
-    let productoEncontrado = productos.find(prod => prod.id === parseInt(id));
-    carrito.push(productoEncontrado);
+
+
+botonCarrito.addEventListener("click", (e) => {
+    return mostrarCarrito();
+
+})
+   
+let contador = 0;
+
+function precioTotal() {
+    carrito.forEach((item) => {
+        contador += item.precio;
+
+    })
 
 }
-console.log(carrito);
-}*/
+
+
+
+
