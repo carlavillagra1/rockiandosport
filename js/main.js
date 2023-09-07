@@ -2,6 +2,7 @@ const btnBuscar = document.querySelector("#btnbuscar");
 inputIngreso = document.querySelector("#ingreso");
 const contenedor = document.querySelector("#contenedor");
 const botonCarrito = document.querySelector("#btnCarrito")
+const botonCerrar = document.querySelector("#btn-close")
 console.log(productos);
 
 
@@ -89,18 +90,17 @@ const contenedorCarrito = document.querySelector("#contenedor-carrito");
 
 
 function mostrarCarrito() {
-    contenedorCarrito.innerHTML = "<h1> Carrito de compras</h1>";
+    contenedorCarrito.innerHTML = "<h1> Carrito de compras </h1> ";
     carrito.forEach(item => {
         const cajacarrito = document.createElement("div");
         cajacarrito.innerHTML = `
             <p>Producto: ${item.producto.nombre}</p>
             <p>Cantidad: ${item.cantidad}</p>
-            <p>Precio Unitario: $${item.producto.precio}</p>
+            <p>Precio : $${item.producto.precio}</p>
             <p> Total: $${item.producto.precio * item.cantidad}</p>
             
         `;
-
-
+    
         contenedorCarrito.appendChild(cajacarrito);
     });
 }
@@ -110,7 +110,7 @@ botonCarrito.addEventListener("click", (e) => {
     return mostrarCarrito();
 
 })
-   
+
 let contador = 0;
 
 function precioTotal() {
@@ -120,7 +120,3 @@ function precioTotal() {
     })
 
 }
-
-
-
-
