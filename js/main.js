@@ -88,22 +88,30 @@ function agregarAlcarrito(id) {
 }
 const contenedorCarrito = document.querySelector("#contenedor-carrito");
 
-
 function mostrarCarrito() {
-    contenedorCarrito.innerHTML = "<h1> Carrito de compras </h1> ";
-    carrito.forEach(item => {
-        const cajacarrito = document.createElement("div");
-        cajacarrito.innerHTML = `
+	const buttonClose = document.createElement("button");
+	buttonClose.textContent = "X";
+	buttonClose.classList.add("button-close");
+	contenedorCarrito.classList.remove("hide");
+	contenedorCarrito.innerHTML = "<h1> Carrito de compras </h1> ";
+	contenedorCarrito.appendChild(buttonClose);
+	buttonClose.addEventListener("click", () => {
+		contenedorCarrito.classList.add("hide");
+	});
+	carrito.forEach((item) => {
+		const cajacarrito = document.createElement("div");
+		cajacarrito.innerHTML = `
             <p>Producto: ${item.producto.nombre}</p>
             <p>Cantidad: ${item.cantidad}</p>
             <p>Precio : $${item.producto.precio}</p>
             <p> Total: $${item.producto.precio * item.cantidad}</p>
             
         `;
-    
-        contenedorCarrito.appendChild(cajacarrito);
-    });
+
+		contenedorCarrito.appendChild(cajacarrito);
+	});
 }
+
 
 
 botonCarrito.addEventListener("click", (e) => {

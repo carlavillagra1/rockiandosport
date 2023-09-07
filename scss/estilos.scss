@@ -238,28 +238,33 @@
     /*class carrito*/
     
     .carrito{
+        width: 30%;
         height: 60vh;
-        position: fixed;
+        position: absolute;
+        top: 60%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        background: $color2;
         align-items: center;
-        color: $color1;
+        text-align: center;
+        
         font-size: 14px;
-        width: 300px;
-        right: 10px;
-        top: 50px;
          
             h1{
                 font-size: 15px;
+                color: $color1;
             }
             div{
                 background: $color2;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                align-items: center;
                 gap: 10px;
-                width: 300px;
+                width: 400px;
                 padding: 10px;
 
-               
+
                 p{
                     color: $color1;
                     font-weight: bold;
@@ -268,19 +273,27 @@
                     width: 110px;
                     align-items: center;
                     font-size: 10px;
+                    border-radius: 10px;
                     
                 }
             }
-            button{
-                text-align: end;
-                background: $color2;
-                border: solid 1px $color1;
-                color: $color1;
-                border-radius: 10px;
-                font-weight: bolder;
-            }
 
+
+            .button-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $color2;
+                color: $color1;
+                border: solid 1px $color1;
+                border-radius: 6px;
+                padding: 0 10px;
+            }
+        
             
+    }
+    .hide {
+        display: none;
     }
 
     /*class contacto*/
