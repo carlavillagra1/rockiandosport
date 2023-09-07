@@ -175,7 +175,7 @@ body {
 
 /*class carrito*/
 .carrito {
-  width: 30%;
+  width: 35%;
   height: 60vh;
   position: absolute;
   top: 60%;
@@ -184,11 +184,16 @@ body {
   background: #010e0e;
   align-items: center;
   text-align: center;
+  overflow-y: scroll;
   font-size: 14px;
 }
 .carrito h1 {
   font-size: 15px;
   color: #daca4a;
+}
+.carrito h2 {
+  color: white;
+  font-size: 18px;
 }
 .carrito div {
   background: #010e0e;
