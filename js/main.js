@@ -35,13 +35,14 @@ mostrarProductos(productos);
 //Funciones de búsqueda
 function buscarProductos(arr, filtro) {
     const encontrado = arr.find((el) => {
-        return el.nombre.includes(filtro);
+        // Convertir tanto el nombre del producto como el filtro a minúsculas antes de comparar
+        return el.nombre.toLowerCase().includes(filtro.toLowerCase());
     });
     return encontrado;
 }
 function filtrarProducto(arr, filtro) {
     const filtrado = arr.filter((el) => {
-        return el.nombre.includes(filtro);
+        return el.nombre.toLowerCase().includes(filtro.toLowerCase());
     });
     return filtrado;
 }
@@ -83,6 +84,7 @@ function agregarAlcarrito(id) {
     } else {
         carrito.push({ producto: productoEncontrado, cantidad: 1 }); // Agrégalo como un nuevo ítem con cantidad 1
     }
+    mostrarCarrito();
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
 
@@ -110,6 +112,7 @@ function mostrarCarrito() {
             <p>Cantidad: ${item.cantidad}</p>
             <p>Precio : $${item.producto.precio}</p>
             <p> Total: $${item.producto.precio * item.cantidad}</p>
+            <p><span class="borrar-prod" data-id="${item.producto.id}"> X </span> </p>
             
         `;
 
@@ -123,3 +126,4 @@ botonCarrito.addEventListener("click", (e) => {
     return mostrarCarrito();
 
 })
+
