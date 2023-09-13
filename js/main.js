@@ -112,12 +112,13 @@ function mostrarCarrito() {
             <p>Cantidad: ${item.cantidad}</p>
             <p>Precio : $${item.producto.precio}</p>
             <p> Total: $${item.producto.precio * item.cantidad}</p>
-            <p><span class="borrar-prod" data-id="${item.producto.id}"> X </span> </p>
+            <p><span class="borrar-prod" data-id="${removerDelCarrito}"> X </span></p>
             
         `;
 
 		contenedorCarrito.appendChild(cajacarrito);
 	});
+    
 }
 
 
@@ -127,3 +128,12 @@ botonCarrito.addEventListener("click", (e) => {
 
 })
 
+
+function removerDelCarrito(id){
+    const prodEliminado = carrito.find((producto) => producto.id === id) ;
+    carrito = carrito.filter((prodId) =>{
+        return prodId != prodEliminado;
+    })
+    const posicion = carrito.indexOf(prodEliminado);
+    const borrado = carrito.splice(posicion,1);
+}
