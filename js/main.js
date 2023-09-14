@@ -1,3 +1,4 @@
+
 const btnBuscar = document.querySelector("#btnbuscar");
 inputIngreso = document.querySelector("#ingreso");
 const contenedor = document.querySelector("#contenedor");
@@ -84,10 +85,23 @@ function agregarAlcarrito(id) {
     } else {
         carrito.push({ producto: productoEncontrado, cantidad: 1 }); // Agrégalo como un nuevo ítem con cantidad 1
     }
+    
+    recuperar();
+
     mostrarCarrito();
+
+
+}
+/*Almacenamos en el local storage */
+function sincronizarStorage(){
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
-
+}
+/* Recuperamos los productos del local storage*/
+function recuperar (){
+contenedorCarrito.addEventListener('DOMContentLoaded', () =>{
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    mostrarCarrito()
+})
 }
 const contenedorCarrito = document.querySelector("#contenedor-carrito");
 
@@ -112,28 +126,33 @@ function mostrarCarrito() {
             <p>Cantidad: ${item.cantidad}</p>
             <p>Precio : $${item.producto.precio}</p>
             <p> Total: $${item.producto.precio * item.cantidad}</p>
-            <p><span class="borrar-prod" data-id="${removerDelCarrito}"> X </span></p>
+            <p onclick="removerDelCarrito(${item.id})" class="borrar"> X </p>
             
         `;
 
 		contenedorCarrito.appendChild(cajacarrito);
 	});
-    
+   
 }
-
-
-
+    /* Boton ver carrito*/ 
 botonCarrito.addEventListener("click", (e) => {
     return mostrarCarrito();
+    
+
 
 })
 
 
+/* Eliminar producto del carrito*/
 function removerDelCarrito(id){
-    const prodEliminado = carrito.find((producto) => producto.id === id) ;
-    carrito = carrito.filter((prodId) =>{
-        return prodId != prodEliminado;
-    })
+    const prodEliminado = carrito.find((producto) => producto.id) ;
     const posicion = carrito.indexOf(prodEliminado);
-    const borrado = carrito.splice(posicion,1);
+    // BUSCO LA POSICIÓN EN EL ARRAY DEL OBJETO A ELIMINAR 
+    carrito.splice(posicion,1 );
+    // LO ELIMINO CON SPLICE  Y LUEGO VUELVO A LLAMAR A LA FUNCIÓN QUE MUESTRA LOS
+    // PRODUCTOS EN EL CARRITO 
+    mostrarCarrito() 
+
 }
+
+
