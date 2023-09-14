@@ -39,7 +39,6 @@ function agregarAlcarrito(id) {
 
     if (carritoItem) {
         carritoItem.cantidad++; // Incrementa la cantidad si el producto ya está en el carrito
-        console.log(carritoItem)
         localStorage.setItem('carrito', JSON.stringify(carrito))
         // VUELVO A ALMACENAR LA NUEVA CANTIDAD EN "CARRITO"
 
@@ -57,8 +56,6 @@ function mostrarCarrito() {
     const carritoGuardado = JSON.parse(localStorage.getItem('carrito'))
     //  TRAIGO LOS PRODUCTOS ALMACENADOS DEL STORAGE, PARSEADOS, COMO ES UN ARRAY, LO RECORRO PARA
     // MOSTRAR EN EL CARRITO.
-    console.log(carritoGuardado)
-
     const buttonClose = document.createElement("button");
     buttonClose.textContent = "X";
     buttonClose.classList.add("button-close");
