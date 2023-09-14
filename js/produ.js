@@ -61,9 +61,8 @@ const productos = [
 ]
 
 
-/*
-/*Almacenamos en el local storage 
-function guardarStorage(){
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-*/
+
+
+
+
+
