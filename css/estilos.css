@@ -259,6 +259,7 @@ body {
   padding: 10px;
   font-size: 12px;
   border: solid 1px #daca4a;
+  color: #010e0e;
 }
 .carrito .button-finalizar {
   width: 190px;
@@ -1019,9 +1020,6 @@ body {
   }
   .padre .hijo img {
     height: 210px;
-  }
-  .padre .hijo .vermas {
-    flex-direction: column;
   }
   .carrito {
     width: 70%;

@@ -333,6 +333,7 @@
                 padding: 10px;
                 font-size: 12px;
                 border: solid 1px $color1;
+                color: $color2;
             }
             .button-finalizar{
                 width: 190px;
@@ -1156,10 +1157,6 @@
                 img{
                     height: 210px;
                 }
-                .vermas{
-                    flex-direction: column;
-                }
-            
         }
         }
         .carrito{
