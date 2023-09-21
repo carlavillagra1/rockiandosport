@@ -3,6 +3,7 @@
 
 
 
+
 /*extend*/
 .botones{
     text-decoration: none;
@@ -168,22 +169,26 @@
         }
         .botonCarrito{
             
-            height: 39px;
-            width: 120px;
+            height: 40px;
+            width: 90px;
             font-size: 18px;
-            color: $color2;
-            background: $color1;
+            background: $color2;
             border-radius: 40px;
-            border: solid 3px $color1;
+            border: none;
             font-weight: bolder;
             
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
 
 
         }
+
 }
 
 .padre{
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction:row ;
     flex-wrap: wrap;
@@ -196,15 +201,15 @@
             justify-content: space-evenly;
             align-items: center;
             border: solid 3px $color1;
-            height: 50vh;
+            height: 55vh;
             border-radius: 10px;
             text-align: center;
             color: $colortexto;
             width: 200px;
 
             img{
-                height: 160px;
-                width: 150px;
+                height: 150px;
+                width: 140px;
                 padding: 10px;
                 
                 
@@ -253,6 +258,9 @@
             h1{
                 font-size: 15px;
                 color: $color1;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: bolder;
             }
             h2{
                 color: $colortexto;
@@ -280,6 +288,24 @@
                     border-radius: 10px;
                     
                 }
+                .borrar{
+                    width:30px;
+                    height: 25px;
+                    padding: 0;
+                    align-items: center;
+
+                        img{
+                            width: 15px;
+                            height: 15px;
+                        }
+                        button{
+                            background: $colorfondo;
+                            width: 30px;
+                            height: 25px;
+                            border: none;
+                            border-radius: 10px;
+                        }
+                }
 
             }
 
@@ -288,18 +314,67 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                background: $color2;
-                color: $color1;
+                background: $color1;
                 border: solid 1px $color1;
-                border-radius: 6px;
-                padding: 0 10px;
+                border-radius: 30px;
+                padding: 3px 7px 4px 7px;
+
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
             }
-        
+
+            .button-vaciar{
+                width: 120px;
+                background: $color1;
+                font-weight: bolder;
+                border-radius: 40px;
+                padding: 10px;
+                font-size: 12px;
+                border: solid 1px $color1;
+            }
+            .button-finalizar{
+                width: 190px;
+                background: $colorfondo;
+                font-weight: bolder;
+                border-radius: 40px;
+                padding: 10px;
+                font-size: 15px;
+                border: solid 1px $color1;
+                color: $color1;
+
+            }
+            .noMostrar{
+                display: none;
+            }
             
+    }
+    .my-sweetalert{
+        background: $color2;
+        border: 1px solid $color1;
+        border-radius: 10px;
+        color: $color1;
+
+        button{
+            background: $color1;
+            color: $color2;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+
+        }
+    
+
+        
+        
     }
     .hide {
         display: none;
     }
+
+
 
     /*class contacto*/
 
@@ -705,6 +780,138 @@
             }
         
         }
+
+         /*class carrito*/
+    
+    .carrito{
+        width: 65%;
+        height: 60vh;
+        position: absolute;
+        top: 70%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        background: $color2;
+        align-items: center;
+        text-align: center;
+        overflow-y: scroll;
+        font-size: 14px;
+         
+            h1{
+                font-size: 12px;
+                color: $color1;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: bolder;
+            }
+            h2{
+                color: $colortexto;
+                font-size: 15px;
+            }
+            div{
+                background: $color2;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 400px;
+                padding: 10px;
+
+
+                p{
+                    color: $color1;
+                    font-weight: bold;
+                    padding: 10px;
+                    background: $colorfondo;
+                    width: 110px;
+                    align-items: center;
+                    font-size: 10px;
+                    border-radius: 10px;
+                    
+                }
+                .borrar{
+                    width:30px;
+                    height: 25px;
+                    padding: 0;
+                    align-items: center;
+
+                        img{
+                            width: 14px;
+                            height: 14px;
+                        }
+                        button{
+                            background: $colorfondo;
+                            width: 25px;
+                            height: 20px;
+                            border: none;
+                            border-radius: 10px;
+                        }
+                }
+
+            }
+
+
+            .button-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $color1;
+                border: solid 1px $color1;
+                border-radius: 30px;
+                padding: 3px 10px 25px 3px;
+                height: 25px;
+                width: 20px;
+
+                    img{
+                        width: 12px;
+                        height: 12px;
+                        
+                    }
+                    
+            }
+
+            .button-vaciar{
+                width: 100px;
+                background: $color1;
+                font-weight: bolder;
+                border-radius: 40px;
+                padding: 10px;
+                font-size: 11px;
+                border: solid 1px $color1;
+            }
+            .button-finalizar{
+                width: 120px;
+                background: $colorfondo;
+                font-weight: bolder;
+                border-radius: 40px;
+                padding: 10px;
+                font-size: 11px;
+                border: solid 1px $color1;
+                color: $color1;
+
+            }
+            .noMostrar{
+                display: none;
+            }
+            
+    }
+    .my-sweetalert{
+        background: $color2;
+        border: 1px solid $color1;
+        border-radius: 10px;
+        color: $color1;
+
+        button{
+            background: $color1;
+            color: $color2;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+
+        }   
+        
+    }
     /*nosotros*/
     .caja{
         height: 280vh;
@@ -909,29 +1116,42 @@
 
         /*productos*/
         .buscador{
-            padding: 30px;
+            padding: 10px;
 
             input{
                 height: 30px;
-                width: 250px;
+                width: 180px;
                 border-radius: 40px;
             }
             button{
-                height: 33px;
+                height: 35px;
                 width: 100px;
+            }
+            .botonCarrito{
+                height: 39px;
+                width: 150px;
+                font-size: 18px;
+                background: $color2;
+                border-radius: 40px;
+                border: none;
+                font-weight: bolder;
+                
+    
+    
             }
 
     }
         .padre{
-            height: 430vh;
+            height:auto;
             flex-direction: column ;
-            justify-content:space-around;
+            justify-content:space-evenly;
 
             .hijo{
                 flex-wrap: wrap;
-                height: 70vh;
+                height: 80vh;
                 width: 230px;
                 gap: 10px;
+                justify-content: space-evenly;
 
                 img{
                     height: 210px;
@@ -942,6 +1162,87 @@
             
         }
         }
+        .carrito{
+            width: 70%;
+            height: 60vh;
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            background: $color2;
+            align-items: center;
+            text-align: center;
+            overflow-y: scroll;
+            font-size: 10px;
+            
+                h1{
+                    font-size: 10px;
+                    color: $color1;
+                }
+                h2{
+                    color: $colortexto;
+                    font-size: 10px;
+                }
+                div{
+                    background: $color2;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 10px;;
+                    width: 260px;
+                
+    
+    
+                    p{
+                        color: $color1;
+                        font-weight: bold;
+                        padding: 5px;
+                        background: $colorfondo;
+                        width: 40px;
+                        font-size: 6px;
+                        border-radius: 10px;
+
+                        
+                    }
+                    .borrar{
+                        width:20px;
+                        height: 25px;
+                        padding: 0;
+                        align-items: center;
+    
+                            img{
+                                width: 12px;
+                                height: 12px;
+                            }
+                            button{
+                                background: $colorfondo;
+                                width: 25px;
+                                height: 20px;
+                                border: none;
+                                border-radius: 10px;
+                            }
+                    }
+                }
+                .button-close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: $color1;
+                    border: solid 1px $color1;
+                    border-radius: 30px;
+                    padding: 3px 7px 7px 7px;
+                    width: 25px;
+                    height: 25px;
+    
+                        img{
+                            width: 11px;
+                            height: 11px;
+                        }
+                }
+            }   
+             
 
         /* class nosotros*/
         .caja{

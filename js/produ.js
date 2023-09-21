@@ -1,4 +1,4 @@
-const productos = [
+/*const productos = [
     {
         id: 1,
         nombre: "Conjunto de boca",
@@ -23,6 +23,7 @@ const productos = [
         id: 3,
         nombre: "Visera polo ralph",
         precio: 9500,
+        talle:"regulable",
         img: "viserap.png",
         categoria: "vintage",
         cantidad:1,
@@ -51,6 +52,7 @@ const productos = [
     {
         id: 6,
         nombre: "Visera nike SB",
+        talle: "regulable",
         precio: 15000,
         img: "prod5.png",
         categoria: "otros",
@@ -66,3 +68,4 @@ const productos = [
 
 
 
+*/

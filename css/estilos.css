@@ -122,18 +122,21 @@ body {
   font-weight: bolder;
 }
 .buscador .botonCarrito {
-  height: 39px;
-  width: 120px;
+  height: 40px;
+  width: 90px;
   font-size: 18px;
-  color: #010e0e;
-  background: #daca4a;
+  background: #010e0e;
   border-radius: 40px;
-  border: solid 3px #daca4a;
+  border: none;
   font-weight: bolder;
+}
+.buscador .botonCarrito img {
+  width: 30px;
+  height: 30px;
 }
 
 .padre {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -146,15 +149,15 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border: solid 3px #daca4a;
-  height: 50vh;
+  height: 55vh;
   border-radius: 10px;
   text-align: center;
   color: white;
   width: 200px;
 }
 .padre .hijo img {
-  height: 160px;
-  width: 150px;
+  height: 150px;
+  width: 140px;
   padding: 10px;
 }
 .padre .hijo h2 {
@@ -190,6 +193,9 @@ body {
 .carrito h1 {
   font-size: 15px;
   color: #daca4a;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 .carrito h2 {
   color: white;
@@ -215,15 +221,72 @@ body {
   font-size: 10px;
   border-radius: 10px;
 }
+.carrito div .borrar {
+  width: 30px;
+  height: 25px;
+  padding: 0;
+  align-items: center;
+}
+.carrito div .borrar img {
+  width: 15px;
+  height: 15px;
+}
+.carrito div .borrar button {
+  background: #3d432d;
+  width: 30px;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+}
 .carrito .button-close {
   position: absolute;
   top: 0;
   right: 0;
-  background: #010e0e;
-  color: #daca4a;
+  background: #daca4a;
   border: solid 1px #daca4a;
-  border-radius: 6px;
-  padding: 0 10px;
+  border-radius: 30px;
+  padding: 3px 7px 4px 7px;
+}
+.carrito .button-close img {
+  width: 15px;
+  height: 15px;
+}
+.carrito .button-vaciar {
+  width: 120px;
+  background: #daca4a;
+  font-weight: bolder;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 12px;
+  border: solid 1px #daca4a;
+}
+.carrito .button-finalizar {
+  width: 190px;
+  background: #3d432d;
+  font-weight: bolder;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 15px;
+  border: solid 1px #daca4a;
+  color: #daca4a;
+}
+.carrito .noMostrar {
+  display: none;
+}
+
+.my-sweetalert {
+  background: #010e0e;
+  border: 1px solid #daca4a;
+  border-radius: 10px;
+  color: #daca4a;
+}
+.my-sweetalert button {
+  background: #daca4a;
+  color: #010e0e;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
 }
 
 .hide {
@@ -602,6 +665,119 @@ body {
   .padre .hijo {
     height: 55vh;
   }
+  /*class carrito*/
+  .carrito {
+    width: 65%;
+    height: 60vh;
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    background: #010e0e;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+    font-size: 14px;
+  }
+  .carrito h1 {
+    font-size: 12px;
+    color: #daca4a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  .carrito h2 {
+    color: white;
+    font-size: 15px;
+  }
+  .carrito div {
+    background: #010e0e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+    padding: 10px;
+  }
+  .carrito div p {
+    color: #daca4a;
+    font-weight: bold;
+    padding: 10px;
+    background: #3d432d;
+    width: 110px;
+    align-items: center;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+  .carrito div .borrar {
+    width: 30px;
+    height: 25px;
+    padding: 0;
+    align-items: center;
+  }
+  .carrito div .borrar img {
+    width: 14px;
+    height: 14px;
+  }
+  .carrito div .borrar button {
+    background: #3d432d;
+    width: 25px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+  }
+  .carrito .button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #daca4a;
+    border: solid 1px #daca4a;
+    border-radius: 30px;
+    padding: 3px 10px 25px 3px;
+    height: 25px;
+    width: 20px;
+  }
+  .carrito .button-close img {
+    width: 12px;
+    height: 12px;
+  }
+  .carrito .button-vaciar {
+    width: 100px;
+    background: #daca4a;
+    font-weight: bolder;
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 11px;
+    border: solid 1px #daca4a;
+  }
+  .carrito .button-finalizar {
+    width: 120px;
+    background: #3d432d;
+    font-weight: bolder;
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 11px;
+    border: solid 1px #daca4a;
+    color: #daca4a;
+  }
+  .carrito .noMostrar {
+    display: none;
+  }
+  .my-sweetalert {
+    background: #010e0e;
+    border: 1px solid #daca4a;
+    border-radius: 10px;
+    color: #daca4a;
+  }
+  .my-sweetalert button {
+    background: #daca4a;
+    color: #010e0e;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+  }
   /*nosotros*/
   .caja {
     height: 280vh;
@@ -809,33 +985,115 @@ body {
   }
   /*productos*/
   .buscador {
-    padding: 30px;
+    padding: 10px;
   }
   .buscador input {
     height: 30px;
-    width: 250px;
+    width: 180px;
     border-radius: 40px;
   }
   .buscador button {
-    height: 33px;
+    height: 35px;
     width: 100px;
   }
+  .buscador .botonCarrito {
+    height: 39px;
+    width: 150px;
+    font-size: 18px;
+    background: #010e0e;
+    border-radius: 40px;
+    border: none;
+    font-weight: bolder;
+  }
   .padre {
-    height: 430vh;
+    height: auto;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .padre .hijo {
     flex-wrap: wrap;
-    height: 70vh;
+    height: 80vh;
     width: 230px;
     gap: 10px;
+    justify-content: space-evenly;
   }
   .padre .hijo img {
     height: 210px;
   }
   .padre .hijo .vermas {
     flex-direction: column;
+  }
+  .carrito {
+    width: 70%;
+    height: 60vh;
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: #010e0e;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+    font-size: 10px;
+  }
+  .carrito h1 {
+    font-size: 10px;
+    color: #daca4a;
+  }
+  .carrito h2 {
+    color: white;
+    font-size: 10px;
+  }
+  .carrito div {
+    background: #010e0e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 260px;
+  }
+  .carrito div p {
+    color: #daca4a;
+    font-weight: bold;
+    padding: 5px;
+    background: #3d432d;
+    width: 40px;
+    font-size: 6px;
+    border-radius: 10px;
+  }
+  .carrito div .borrar {
+    width: 20px;
+    height: 25px;
+    padding: 0;
+    align-items: center;
+  }
+  .carrito div .borrar img {
+    width: 12px;
+    height: 12px;
+  }
+  .carrito div .borrar button {
+    background: #3d432d;
+    width: 25px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+  }
+  .carrito .button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #daca4a;
+    border: solid 1px #daca4a;
+    border-radius: 30px;
+    padding: 3px 7px 7px 7px;
+    width: 25px;
+    height: 25px;
+  }
+  .carrito .button-close img {
+    width: 11px;
+    height: 11px;
   }
   /* class nosotros*/
   .caja {
