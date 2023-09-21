@@ -11,7 +11,6 @@ const url = "../data/productos.json";
 fetch(url)
 .then(res => res.json())
 .then(data=>{
-    console.log(data);
     mostrarProductos(data)
 
 })
@@ -123,7 +122,7 @@ function crearHtml(data,arr) {
 
 
 
-const carrito = []
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //  CARRITO GLOBAL
 
@@ -139,7 +138,6 @@ function agregarAlcarrito(productos, id) {
 
     } else {
         carrito.push({ producto: productoEncontrado, cantidad: 1 }); // Agrégalo como un nuevo ítem con cantidad 1
-        console.log(carrito)
         localStorage.setItem('carrito', JSON.stringify(carrito))
         //  ALMACENO EN STORAGE EL NUEVO OBJETO AGREGADO
         mostrarCarrito()
@@ -223,14 +221,14 @@ function mostrarCarrito() {
         })
 
     });
-    carritoGuardado.forEach(({ producto, cantidad, id }) => {
+    carritoGuardado.forEach(({ producto, cantidad}) => {
         const cajacarrito = document.createElement("div");
         cajacarrito.innerHTML = `
             <p>Producto: ${producto.nombre}</p>
             <p>Cantidad: ${cantidad}</p>
             <p>Precio: $${producto.precio}</p>
             <p>Total: $${producto.precio * cantidad}</p>
-            <p onclick="removerDelCarrito(${id})" class="borrar">
+            <p onclick="removerDelCarrito(${producto.id})" class="borrar">
                 <button><img src="../img/borrar.png" alt="botón borrar"></button>
             </p>
         `;
@@ -279,7 +277,7 @@ botonCarrito.addEventListener("click", (e) => {
 
 /* Eliminar producto del carrito*/
 function removerDelCarrito(id) {
-    const prodEliminado = carrito.find((producto) => producto.id === id);
+    const prodEliminado = carrito.find((producto) => producto.producto.id === id);
     if( prodEliminado.cantidad === 1){
     const posicion = carrito.indexOf(prodEliminado);
     //  BUSCO LA POSICIÓN EN EL ARRAY DEL OBJETO A ELIMINAR 
