@@ -248,7 +248,7 @@ function mostrarCarrito() {
         Swal.fire({
             title: 'Gracias por tu compra!',
             text: ` El total de la compra es: $${totalCarrito} `,
-            imageUrl: '../img/logo.jpg',
+            imageUrl: '../img/logo.JPG',
             imageWidth: 150,
             imageHeight: 150,
             imageAlt: 'Custom image',
